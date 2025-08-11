@@ -1,3 +1,67 @@
+/* --- PROFESSIONAL CIRCULAR JEWEL LAYOUT --- */
+.miraculous-jewel-circle {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffe4ec 0%, #f8bbd0 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.37), 0 2px 8px 0 rgba(255, 182, 193, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  border: 2.5px solid rgba(255, 182, 193, 0.35);
+  transition: box-shadow 0.3s;
+}
+
+.miraculous-jewel {
+  width: 76px;
+  height: 76px;
+  background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px 0 rgba(255, 182, 193, 0.18), 0 1px 4px 0 rgba(255, 182, 193, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  border: 2px solid rgba(255, 182, 193, 0.22);
+  transition: transform 0.22s cubic-bezier(.4,2,.3,1), box-shadow 0.22s, border 0.22s;
+  z-index: 2;
+}
+
+.miraculous-jewel img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(255, 182, 193, 0.18));
+  transition: filter 0.22s;
+}
+
+.miraculous-jewel:hover {
+  transform: scale(1.13);
+  box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.32), 0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  border: 2.5px solid #f8bbd0;
+}
+
+.miraculous-jewel.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 92px;
+  height: 92px;
+  background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
+  box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.32), 0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  border: 2.5px solid #f8bbd0;
+}
+
+.miraculous-jewel.center img {
+  width: 72px;
+  height: 72px;
+}
 /* ✨ AESTHETIC VINTAGE MIRACULOUS BOX - SOFT BABY PINK THEME ✨ */
 
 /* Global Baby Pink Background for Complete Project */
