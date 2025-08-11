@@ -100,17 +100,27 @@ const MiraculousBoxCanonical: React.FC<MiraculousBoxCanonicalProps> = ({
   const renderCanonicalBox = () => (
     <div className="miraculous-box-replica">
       <div className="miraculous-jewel-circle">
-        {/* Place Ladybug in the center */}
-        <div
-          className="miraculous-jewel center"
-          onClick={() => handleMiraculousClick('ladybug')}
-        >
-          <img src={getMiraculousImage('ladybug')} alt="Ladybug Miraculous" />
+        {/* Center: Ladybug (left) and Cat Noir (right) side by side */}
+        <div className="center-jewels">
+          <div
+            className="miraculous-jewel center center-ladybug"
+            style={{ left: '50%', top: '50%', transform: 'translate(-110%, -50%)' }}
+            onClick={() => handleMiraculousClick('ladybug')}
+          >
+            <img src={getMiraculousImage('ladybug')} alt="Ladybug Miraculous" />
+          </div>
+          <div
+            className="miraculous-jewel center center-catnoir"
+            style={{ left: '50%', top: '50%', transform: 'translate(10%, -50%)' }}
+            onClick={() => handleMiraculousClick('cat')}
+          >
+            <img src={getMiraculousImage('cat')} alt="Cat Noir Miraculous" />
+          </div>
         </div>
-        {/* Place the other 18 miraculous evenly around the circle */}
-        {miraculousOrder.filter(m => m !== 'ladybug').map((miraculousId, idx) => {
-          // 18 jewels around the circle
-          const angle = (idx * (360 / 18));
+        {/* Place the other 17 miraculous evenly around the circle */}
+        {miraculousOrder.filter(m => m !== 'ladybug' && m !== 'cat').map((miraculousId, idx) => {
+          // 17 jewels around the circle
+          const angle = (idx * (360 / 17));
           return (
             <div
               key={miraculousId}
