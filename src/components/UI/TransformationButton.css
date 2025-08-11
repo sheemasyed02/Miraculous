@@ -1,0 +1,205 @@
+/* VINTAGE PINKISH TRANSFORMATION BUTTON - ELEGANTLY POLISHED */
+
+.transformation-button {
+  --button-color: var(--rose-gold);
+  padding: 1.125rem 2.5rem;
+  border: 2px solid rgba(232, 180, 184, 0.2);
+  border-radius: var(--radius-large);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0.75rem;
+  min-width: 240px;
+  box-shadow: var(--shadow-soft);
+  font-family: 'Inter', 'Georgia', serif;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  background: var(--gradient-card);
+  backdrop-filter: blur(15px);
+}
+
+.transformation-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(232, 180, 184, 0.1),
+    rgba(240, 197, 201, 0.1),
+    rgba(212, 196, 199, 0.1),
+    rgba(232, 180, 184, 0.1));
+  border-radius: calc(var(--radius-large) + 2px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: vintage-shimmer-btn 8s ease-in-out infinite;
+}
+
+@keyframes vintage-shimmer-btn {
+  0%, 100% { background-position: -200% center; }
+  50% { background-position: 200% center; }
+}
+
+.transformation-button::after {
+  display: none;
+}
+
+.transformation-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-medium);
+  border-color: rgba(232, 180, 184, 0.4);
+  background: rgba(255, 251, 252, 0.95);
+}
+
+.transformation-button:hover::before {
+  opacity: 1;
+}
+
+.transformation-button:active {
+  transform: translateY(-1px) scale(1);
+  box-shadow: var(--shadow-soft);
+}
+
+.spell-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Transform Button (Ladybug & Cat Noir theme) */
+.btn-transform {
+  background: linear-gradient(135deg, var(--rose-gold) 0%, var(--soft-pink) 50%, var(--dusty-pink) 100%);
+  color: var(--text-primary);
+  border: 2px solid rgba(232, 180, 184, 0.3);
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+.btn-transform:hover {
+  background: linear-gradient(135deg, var(--rose-gold) 0%, var(--soft-pink) 50%, var(--dusty-pink) 100%);
+  box-shadow: 
+    var(--shadow-medium),
+    inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(232, 180, 184, 0.5);
+}
+
+/* Detransform Button (More subtle) */
+.btn-detransform {
+  background: linear-gradient(135deg, var(--soft-lavender) 0%, var(--vintage-mauve) 50%, var(--vintage-dusty) 100%);
+  color: var(--text-primary);
+  border: 2px solid rgba(212, 196, 199, 0.3);
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+.btn-detransform:hover {
+  background: linear-gradient(135deg, var(--soft-lavender) 0%, var(--vintage-mauve) 50%, var(--vintage-dusty) 100%);
+  box-shadow: 
+    var(--shadow-medium),
+    inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(212, 196, 199, 0.5);
+}
+
+/* Power Up Button (Gold theme) */
+.btn-power-up {
+  background: linear-gradient(135deg, var(--vintage-gold) 0%, var(--warm-cream) 50%, var(--vintage-pearl) 100%);
+  color: var(--text-primary);
+  border: 2px solid rgba(212, 175, 143, 0.3);
+  font-weight: 700;
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+.btn-power-up:hover {
+  background: linear-gradient(135deg, var(--vintage-gold) 0%, var(--warm-cream) 50%, var(--vintage-pearl) 100%);
+  box-shadow: 
+    var(--shadow-medium),
+    inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(212, 175, 143, 0.5);
+}
+
+/* Power Off Button */
+.btn-power-off {
+  background: linear-gradient(135deg, var(--vintage-dusty) 0%, var(--vintage-mauve) 50%, var(--vintage-blush) 100%);
+  color: var(--text-primary);
+  border: 2px solid rgba(212, 196, 199, 0.3);
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+.btn-power-off:hover {
+  background: linear-gradient(135deg, var(--vintage-dusty) 0%, var(--vintage-mauve) 50%, var(--vintage-blush) 100%);
+  box-shadow: 
+    var(--shadow-medium),
+    inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(212, 196, 199, 0.5);
+}
+
+/* Character-specific button styling (using CSS variables) */
+.transformation-button[style*="--button-color"] {
+  border-color: var(--button-color);
+}
+
+.transformation-button[style*="--button-color"]:hover {
+  box-shadow: 
+    var(--shadow-medium),
+    inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  border-color: var(--button-color);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+/* Vintage icon styles */
+.transform-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  opacity: 0.9;
+  filter: drop-shadow(0 1px 3px rgba(232, 180, 184, 0.3));
+}
+
+.transform-icon::before,
+.transform-icon::after {
+  display: none;
+}
+
+/* Media Queries - Vintage Responsive */
+@media (max-width: 768px) {
+  .transformation-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transformation-button {
+    font-size: 0.95rem;
+    padding: 0.875rem 1.75rem;
+    min-width: 200px;
+  }
+}

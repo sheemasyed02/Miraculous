@@ -1,0 +1,1021 @@
+/* ✨ AESTHETIC VINTAGE MIRACULOUS BOX - SOFT BABY PINK THEME ✨ */
+
+/* Global Baby Pink Background for Complete Project */
+body {
+  background: linear-gradient(135deg, 
+    #ffeef7 0%,
+    #ffd4ed 25%,
+    #ffb8e1 50%, 
+    #ffa3d9 75%,
+    #ff8dcf 100%);
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Main Views - Aesthetic Baby Pink Theme */
+.replica-closed-view,
+.replica-box-view,
+.replica-character-view {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 2rem;
+  position: relative;
+}
+
+/* ✨ CLOSED BOX - FREE FLOATING WITHOUT OUTER BORDERS ✨ */
+.replica-closed-container {
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  position: relative;
+}
+
+.replica-closed-box {
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  overflow: visible;
+  filter: drop-shadow(0 20px 40px rgba(255, 182, 193, 0.4));
+}
+
+.replica-closed-box::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle, 
+    rgba(255, 182, 193, 0.3) 0%,
+    rgba(255, 192, 203, 0.2) 40%,
+    rgba(255, 218, 224, 0.1) 70%,
+    transparent 100%);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.6s ease;
+  animation: magical-glow 4s ease-in-out infinite;
+}
+
+@keyframes magical-glow {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 0.4; 
+  }
+  50% { 
+    transform: scale(1.1) rotate(2deg); 
+    opacity: 0.8; 
+  }
+}
+
+.replica-closed-box:hover {
+  transform: translateY(-15px) scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 30px 60px rgba(255, 105, 180, 0.5));
+}
+
+.replica-closed-box:hover::before {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.replica-closed-box img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 0 0 8px rgba(255, 182, 193, 0.3),
+    0 0 0 16px rgba(255, 192, 203, 0.2),
+    0 25px 60px rgba(255, 105, 180, 0.3);
+  transition: all 0.6s ease;
+  background: linear-gradient(135deg, 
+    rgba(255, 240, 245, 0.9), 
+    rgba(255, 228, 225, 0.8));
+}
+
+.replica-instruction {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  color: #8b5a7a;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: 'Inter', serif;
+  text-shadow: 0 2px 8px rgba(255, 182, 193, 0.4);
+  animation: text-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes text-shimmer {
+  0%, 100% { text-shadow: 0 2px 8px rgba(255, 182, 193, 0.4); }
+  50% { text-shadow: 0 4px 16px rgba(255, 105, 180, 0.6); }
+}
+
+/* ✨ AESTHETIC MIRACULOUS BOX CONTAINER ✨ */
+.replica-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.replica-container h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #8b5a7a;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 4px 12px rgba(255, 182, 193, 0.4),
+    0 0 30px rgba(255, 105, 180, 0.3);
+  font-family: 'Inter', serif;
+  position: relative;
+  animation: title-glow 3s ease-in-out infinite;
+}
+
+@keyframes title-glow {
+  0%, 100% { 
+    text-shadow: 0 4px 12px rgba(255, 182, 193, 0.4), 0 0 30px rgba(255, 105, 180, 0.3);
+  }
+  50% { 
+    text-shadow: 0 6px 20px rgba(255, 182, 193, 0.6), 0 0 40px rgba(255, 105, 180, 0.5);
+  }
+}
+
+.replica-container h1::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    #ffb8e1 25%,
+    #ffa3d9 50%,
+    #ff8dcf 75%,
+    transparent 100%);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+/* ✨ MEDIUM-SIZED MIRACULOUS BOX - PERFECT AESTHETIC LAYOUT ✨ */
+.miraculous-box-replica {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 240, 245, 0.9) 25%,
+    rgba(255, 228, 225, 0.85) 50%,
+    rgba(255, 218, 224, 0.9) 75%,
+    rgba(255, 240, 245, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 0 0 8px rgba(255, 182, 193, 0.2),
+    0 0 0 16px rgba(255, 192, 203, 0.15),
+    0 0 0 24px rgba(255, 218, 224, 0.1),
+    0 30px 80px rgba(255, 105, 180, 0.25),
+    inset 0 0 50px rgba(255, 255, 255, 0.3);
+  margin: 2rem auto;
+  transition: all 0.8s ease;
+  animation: box-float 6s ease-in-out infinite;
+}
+
+@keyframes box-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1); 
+    box-shadow: 
+      0 0 0 8px rgba(255, 182, 193, 0.2),
+      0 0 0 16px rgba(255, 192, 203, 0.15),
+      0 0 0 24px rgba(255, 218, 224, 0.1),
+      0 30px 80px rgba(255, 105, 180, 0.25),
+      inset 0 0 50px rgba(255, 255, 255, 0.3);
+  }
+  50% { 
+    transform: translateY(-10px) rotate(1deg) scale(1.02); 
+    box-shadow: 
+      0 0 0 12px rgba(255, 182, 193, 0.3),
+      0 0 0 20px rgba(255, 192, 203, 0.25),
+      0 0 0 28px rgba(255, 218, 224, 0.2),
+      0 40px 100px rgba(255, 105, 180, 0.35),
+      inset 0 0 60px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.miraculous-box-replica::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  background: conic-gradient(from 0deg, 
+    rgba(255, 182, 193, 0.2), 
+    rgba(255, 192, 203, 0.3), 
+    rgba(255, 218, 224, 0.2), 
+    rgba(255, 240, 245, 0.1),
+    rgba(255, 182, 193, 0.2));
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: magical-rotate 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes magical-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ✨ CENTER CROWN JEWELS - LADYBUG & CAT NOIR ✨ */
+.center-circle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 240, 245, 0.9) 50%,
+    rgba(255, 228, 225, 0.95) 100%);
+  backdrop-filter: blur(25px);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  z-index: 50;
+  box-shadow: 
+    0 0 0 6px rgba(255, 182, 193, 0.3),
+    0 0 0 12px rgba(255, 192, 203, 0.2),
+    0 20px 40px rgba(255, 105, 180, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.4);
+  transition: all 0.5s ease;
+  animation: center-pulse 4s ease-in-out infinite;
+}
+
+@keyframes center-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 
+      0 0 0 6px rgba(255, 182, 193, 0.3),
+      0 0 0 12px rgba(255, 192, 203, 0.2),
+      0 20px 40px rgba(255, 105, 180, 0.3),
+      inset 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 
+      0 0 0 8px rgba(255, 182, 193, 0.4),
+      0 0 0 16px rgba(255, 192, 203, 0.3),
+      0 25px 50px rgba(255, 105, 180, 0.4),
+      inset 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.center-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    0 0 0 10px rgba(255, 182, 193, 0.5),
+    0 0 0 20px rgba(255, 192, 203, 0.4),
+    0 30px 60px rgba(255, 105, 180, 0.5),
+    inset 0 0 50px rgba(255, 255, 255, 0.6);
+}
+
+.center-jewel-ladybug,
+.center-jewel-cat {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 8px 25px rgba(255, 105, 180, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.9), 
+    rgba(255, 240, 245, 0.8));
+}
+
+.center-jewel-ladybug::before,
+.center-jewel-cat::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    #ff69b4, #ff1493, #dc143c, #ff69b4);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.center-jewel-ladybug:hover::before {
+  opacity: 0.8;
+  animation: jewel-glow 1s ease-in-out infinite;
+}
+
+.center-jewel-cat::before {
+  background: linear-gradient(45deg, 
+    #4a4a4a, #2c2c2c, #000000, #4a4a4a);
+}
+
+.center-jewel-cat:hover::before {
+  opacity: 0.8;
+  animation: jewel-glow 1s ease-in-out infinite;
+}
+
+@keyframes jewel-glow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.center-jewel-ladybug:hover,
+.center-jewel-cat:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 
+    0 12px 35px rgba(255, 105, 180, 0.4),
+    0 0 30px rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.center-jewel-ladybug img,
+.center-jewel-cat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* ✨ INNER MAGICAL RING - 5 SACRED MIRACULOUS IN PERFECT LAYOUT ✨ */
+.inner-hexagon {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  z-index: 40;
+  animation: inner-rotate 30s linear infinite;
+}
+
+@keyframes inner-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.inner-jewel {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 12px 30px rgba(255, 105, 180, 0.2),
+    0 0 25px rgba(255, 255, 255, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 240, 245, 0.8) 100%);
+  animation: jewel-float 4s ease-in-out infinite;
+}
+
+@keyframes jewel-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1); 
+  }
+  50% { 
+    transform: translateY(-5px) rotate(2deg) scale(1.02); 
+  }
+}
+
+/* Perfect Pentagon Formation with Magical Themes */
+.inner-top {
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, 
+    rgba(255, 140, 0, 0.85) 0%, 
+    rgba(255, 165, 0, 0.9) 50%,
+    rgba(255, 140, 0, 0.85) 100%);
+  box-shadow: 
+    0 0 0 4px rgba(255, 140, 0, 0.3),
+    0 12px 30px rgba(255, 140, 0, 0.2);
+}
+
+.inner-top-right {
+  top: 35px;
+  right: -30px;
+  background: linear-gradient(135deg, 
+    rgba(255, 215, 0, 0.85) 0%, 
+    rgba(255, 223, 0, 0.9) 50%,
+    rgba(255, 215, 0, 0.85) 100%);
+  box-shadow: 
+    0 0 0 4px rgba(255, 215, 0, 0.3),
+    0 12px 30px rgba(255, 215, 0, 0.2);
+}
+
+.inner-bottom-right {
+  bottom: 35px;
+  right: -30px;
+  background: linear-gradient(135deg, 
+    rgba(65, 105, 225, 0.85) 0%, 
+    rgba(100, 149, 237, 0.9) 50%,
+    rgba(65, 105, 225, 0.85) 100%);
+  box-shadow: 
+    0 0 0 4px rgba(65, 105, 225, 0.3),
+    0 12px 30px rgba(65, 105, 225, 0.2);
+}
+
+.inner-bottom {
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, 
+    rgba(153, 50, 204, 0.85) 0%, 
+    rgba(147, 112, 219, 0.9) 50%,
+    rgba(153, 50, 204, 0.85) 100%);
+  box-shadow: 
+    0 0 0 4px rgba(153, 50, 204, 0.3),
+    0 12px 30px rgba(153, 50, 204, 0.2);
+}
+
+.inner-left {
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, 
+    rgba(34, 139, 34, 0.85) 0%, 
+    rgba(60, 179, 113, 0.9) 50%,
+    rgba(34, 139, 34, 0.85) 100%);
+  box-shadow: 
+    0 0 0 4px rgba(34, 139, 34, 0.3),
+    0 12px 30px rgba(34, 139, 34, 0.2);
+}
+
+.inner-jewel:hover {
+  transform: scale(1.15) translateY(-8px) rotate(10deg);
+  box-shadow: 
+    0 20px 50px rgba(255, 105, 180, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.5),
+    inset 0 0 30px rgba(255, 255, 255, 0.3);
+  z-index: 45;
+  border-color: rgba(255, 255, 255, 1);
+  animation: none;
+}
+
+.inner-jewel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
+  transition: filter 0.3s ease;
+}
+
+.inner-jewel:hover img {
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.25)) brightness(1.1);
+}
+
+/* ✨ OUTER CONSTELLATION - 12 ZODIAC MIRACULOUS IN PERFECT LAYOUT ✨ */
+.outer-jewel {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  z-index: 30;
+  box-shadow: 
+    0 8px 25px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 255, 255, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 240, 245, 0.75) 100%);
+  animation: constellation-twinkle 3s ease-in-out infinite;
+}
+
+@keyframes constellation-twinkle {
+  0%, 100% { 
+    opacity: 0.9;
+    box-shadow: 
+      0 8px 25px rgba(255, 105, 180, 0.15),
+      0 0 20px rgba(255, 255, 255, 0.2),
+      inset 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+  50% { 
+    opacity: 1;
+    box-shadow: 
+      0 10px 30px rgba(255, 105, 180, 0.25),
+      0 0 30px rgba(255, 255, 255, 0.3),
+      inset 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Perfect Zodiac Formation - Each with Unique Theme Colors */
+.compartment-top-left {
+  top: -37px;
+  left: 125px;
+  background: linear-gradient(135deg, 
+    rgba(230, 230, 250, 0.85) 0%, 
+    rgba(221, 160, 221, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(221, 160, 221, 0.3),
+    0 8px 25px rgba(221, 160, 221, 0.2);
+}
+
+.compartment-top-center {
+  top: -47px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, 
+    rgba(255, 99, 71, 0.85) 0%, 
+    rgba(220, 20, 60, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(220, 20, 60, 0.3),
+    0 8px 25px rgba(220, 20, 60, 0.2);
+}
+
+.compartment-top-right {
+  top: -37px;
+  right: 125px;
+  background: linear-gradient(135deg, 
+    rgba(210, 180, 140, 0.85) 0%, 
+    rgba(184, 134, 11, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(184, 134, 11, 0.3),
+    0 8px 25px rgba(184, 134, 11, 0.2);
+}
+
+.compartment-right-top {
+  top: 75px;
+  right: -37px;
+  background: linear-gradient(135deg, 
+    rgba(255, 140, 0, 0.85) 0%, 
+    rgba(255, 69, 0, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(255, 69, 0, 0.3),
+    0 8px 25px rgba(255, 69, 0, 0.2);
+}
+
+.compartment-right-bottom {
+  bottom: 75px;
+  right: -37px;
+  background: linear-gradient(135deg, 
+    rgba(65, 105, 225, 0.85) 0%, 
+    rgba(25, 25, 112, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(25, 25, 112, 0.3),
+    0 8px 25px rgba(25, 25, 112, 0.2);
+}
+
+.compartment-bottom-right {
+  bottom: -37px;
+  right: 125px;
+  background: linear-gradient(135deg, 
+    rgba(192, 192, 192, 0.85) 0%, 
+    rgba(105, 105, 105, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(105, 105, 105, 0.3),
+    0 8px 25px rgba(105, 105, 105, 0.2);
+}
+
+.compartment-bottom-center {
+  bottom: -47px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.85) 0%, 
+    rgba(255, 105, 180, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(255, 105, 180, 0.3),
+    0 8px 25px rgba(255, 105, 180, 0.2);
+}
+
+.compartment-bottom-left {
+  bottom: -37px;
+  left: 125px;
+  background: linear-gradient(135deg, 
+    rgba(218, 165, 32, 0.85) 0%, 
+    rgba(255, 215, 0, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(255, 215, 0, 0.3),
+    0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+.compartment-left-bottom {
+  bottom: 75px;
+  left: -37px;
+  background: linear-gradient(135deg, 
+    rgba(147, 112, 219, 0.85) 0%, 
+    rgba(102, 51, 153, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(102, 51, 153, 0.3),
+    0 8px 25px rgba(102, 51, 153, 0.2);
+}
+
+.compartment-left-center {
+  top: 50%;
+  left: -37px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, 
+    rgba(221, 160, 221, 0.85) 0%, 
+    rgba(186, 85, 211, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(186, 85, 211, 0.3),
+    0 8px 25px rgba(186, 85, 211, 0.2);
+}
+
+.compartment-left-top {
+  top: 75px;
+  left: -37px;
+  background: linear-gradient(135deg, 
+    rgba(32, 178, 170, 0.85) 0%, 
+    rgba(0, 139, 139, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(0, 139, 139, 0.3),
+    0 8px 25px rgba(0, 139, 139, 0.2);
+}
+
+.compartment-snake {
+  top: 50px;
+  right: 35px;
+  background: linear-gradient(135deg, 
+    rgba(0, 206, 209, 0.85) 0%, 
+    rgba(72, 209, 204, 0.9) 100%);
+  box-shadow: 
+    0 0 0 3px rgba(72, 209, 204, 0.3),
+    0 8px 25px rgba(72, 209, 204, 0.2);
+}
+
+.outer-jewel:hover {
+  transform: scale(1.25) translateY(-10px) rotate(15deg);
+  box-shadow: 
+    0 15px 40px rgba(255, 105, 180, 0.3),
+    0 0 35px rgba(255, 255, 255, 0.4),
+    inset 0 0 25px rgba(255, 255, 255, 0.3);
+  z-index: 35;
+  border-color: rgba(255, 255, 255, 1);
+  animation: none;
+}
+
+.outer-jewel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+}
+
+.outer-jewel:hover img {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2)) brightness(1.1) saturate(1.2);
+}
+
+/* ✨ CHARACTER VIEW LAYOUT - BOX LEFT, CHARACTER RIGHT AS REQUESTED ✨ */
+.replica-character-view {
+  flex-direction: row;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.replica-box-section {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.replica-character-section {
+  flex: 1;
+  min-width: 400px;
+  max-width: 500px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 240, 245, 0.9) 50%,
+    rgba(255, 228, 225, 0.95) 100%);
+  backdrop-filter: blur(30px);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  padding: 2.5rem;
+  box-shadow: 
+    0 0 0 6px rgba(255, 182, 193, 0.2),
+    0 0 0 12px rgba(255, 192, 203, 0.15),
+    0 25px 60px rgba(255, 105, 180, 0.2),
+    inset 0 0 40px rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: character-glow 4s ease-in-out infinite;
+}
+
+@keyframes character-glow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 0 6px rgba(255, 182, 193, 0.2),
+      0 0 0 12px rgba(255, 192, 203, 0.15),
+      0 25px 60px rgba(255, 105, 180, 0.2),
+      inset 0 0 40px rgba(255, 255, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 0 0 8px rgba(255, 182, 193, 0.3),
+      0 0 0 16px rgba(255, 192, 203, 0.25),
+      0 30px 70px rgba(255, 105, 180, 0.3),
+      inset 0 0 50px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.replica-character-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%,
+    rgba(255, 182, 193, 0.1) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.replica-character-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ✨ ELEGANT CONTROLS ✨ */
+.replica-controls {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.replica-close-btn {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 240, 245, 0.85) 50%,
+    rgba(255, 228, 225, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  color: #8b5a7a;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 
+    0 0 0 4px rgba(255, 182, 193, 0.2),
+    0 12px 30px rgba(255, 105, 180, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
+  font-family: 'Inter', serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.replica-close-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(255, 182, 193, 0.3),
+    rgba(255, 192, 203, 0.3),
+    rgba(255, 218, 224, 0.3),
+    rgba(255, 182, 193, 0.3));
+  border-radius: 27px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.replica-close-btn:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 240, 245, 0.9) 50%,
+    rgba(255, 228, 225, 0.95) 100%);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 0 0 6px rgba(255, 182, 193, 0.3),
+    0 18px 40px rgba(255, 105, 180, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 1);
+  color: #6b4a5a;
+}
+
+.replica-close-btn:hover::before {
+  opacity: 1;
+}
+
+/* ✨ RESPONSIVE BABY PINK AESTHETIC DESIGN ✨ */
+@media (max-width: 1200px) {
+  .replica-character-view {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .replica-box-section {
+    order: 1;
+  }
+  
+  .replica-character-section {
+    order: 2;
+    min-width: auto;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .miraculous-box-replica {
+    width: 450px;
+    height: 450px;
+  }
+  
+  .center-circle {
+    width: 120px;
+    height: 120px;
+    gap: 12px;
+  }
+  
+  .center-jewel-ladybug,
+  .center-jewel-cat {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .inner-hexagon {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .inner-jewel {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .outer-jewel {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media (max-width: 768px) {
+  .replica-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .replica-character-view {
+    padding: 1.5rem;
+  }
+  
+  .replica-character-section {
+    padding: 2rem;
+    border-radius: 25px;
+  }
+  
+  .miraculous-box-replica {
+    width: 380px;
+    height: 380px;
+  }
+  
+  .center-circle {
+    width: 100px;
+    height: 100px;
+    gap: 10px;
+  }
+  
+  .center-jewel-ladybug,
+  .center-jewel-cat {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .inner-hexagon {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .inner-jewel {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .outer-jewel {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .replica-closed-box img {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .replica-instruction {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .replica-container h1 {
+    font-size: 2rem;
+  }
+  
+  .replica-character-view {
+    padding: 1rem;
+  }
+  
+  .replica-character-section {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .miraculous-box-replica {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .center-circle {
+    width: 85px;
+    height: 85px;
+    gap: 8px;
+  }
+  
+  .center-jewel-ladybug,
+  .center-jewel-cat {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .inner-hexagon {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .inner-jewel {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .outer-jewel {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .replica-closed-box img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .replica-instruction {
+    font-size: 1rem;
+  }
+  
+  .replica-controls {
+    margin-top: 2rem;
+  }
+  
+  .replica-close-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}

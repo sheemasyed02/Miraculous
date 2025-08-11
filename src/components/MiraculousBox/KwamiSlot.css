@@ -1,0 +1,162 @@
+.kwami-slot {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.kwami-slot.center {
+  width: 60px;
+  height: 60px;
+}
+
+.kwami-slot.outer {
+  width: 40px;
+  height: 40px;
+}
+
+.kwami-slot:hover {
+  transform: scale(1.1);
+}
+
+.kwami-slot.selected .miraculous-symbol {
+  box-shadow: 0 0 20px rgba(255, 107, 157, 0.8);
+  border-color: #ff6b9d;
+}
+
+.miraculous-slot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miraculous-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miraculous-symbol {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #8b4513;
+  box-shadow: 
+    inset 0 0 10px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+.kwami-image {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+.miraculous-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(8px);
+  z-index: 1;
+  animation: miraculousGlow 3s ease-in-out infinite;
+}
+
+.slot-label {
+  color: #d4a574;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.3rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Special styling for main Miraculous (Ladybug & Cat Noir) */
+.kwami-slot.center .miraculous-symbol {
+  border: 3px solid #5d3a1a;
+  box-shadow: 
+    inset 0 0 15px rgba(0, 0, 0, 0.3),
+    0 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+.kwami-slot.center .miraculous-glow {
+  width: 140%;
+  height: 140%;
+  filter: blur(12px);
+}
+
+/* Outer ring styling */
+.kwami-slot.outer .miraculous-symbol {
+  border: 2px solid #6b4423;
+  box-shadow: 
+    inset 0 0 8px rgba(0, 0, 0, 0.2),
+    0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes miraculousGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .kwami-slot.center {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .kwami-slot.outer {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .slot-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kwami-slot.center {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .kwami-slot.outer {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .slot-label {
+    font-size: 0.6rem;
+  }
+}

@@ -1,0 +1,424 @@
+/* Simple Miraculous Box Styling */
+
+.simple-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.box-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.box-icon-container:hover {
+  transform: scale(1.05);
+}
+
+.box-icon {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+}
+
+.click-instruction {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  font-weight: 300;
+}
+
+/* Character View */
+.character-view {
+  display: flex;
+  min-height: 100vh;
+}
+
+.box-section-simple {
+  flex: 0 0 45%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box-image-simple {
+  margin-bottom: 2rem;
+}
+
+.box-image-simple img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+}
+
+.box-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.character-section {
+  flex: 1;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Box Selection View */
+.box-selection-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.box-selection-view h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.box-container-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-image-clickable {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.box-image-clickable img {
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Clickable Areas - Positioned over the image */
+.click-area {
+  position: absolute;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.click-area:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.click-area:hover .tooltip {
+  opacity: 1;
+}
+
+/* Specific positioning for each miraculous area - based on the exact image layout */
+
+/* Inner octagon - 8 main miraculous in the center octagonal formation */
+.ladybug-area {
+  left: 36%;
+  top: 38%;
+  width: 8%;
+  height: 10%;
+  background: rgba(255, 0, 0, 0.4);
+  border-color: rgba(255, 0, 0, 0.8);
+  border-radius: 15%;
+}
+
+.cat-area {
+  left: 56%;
+  top: 38%;
+  width: 8%;
+  height: 10%;
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(128, 128, 128, 0.8);
+  border-radius: 15%;
+}
+
+.fox-area {
+  left: 46%;
+  top: 24%;
+  width: 8%;
+  height: 10%;
+  background: rgba(255, 119, 0, 0.4);
+  border-color: rgba(255, 119, 0, 0.8);
+  border-radius: 15%;
+}
+
+.bee-area {
+  left: 64%;
+  top: 30%;
+  width: 8%;
+  height: 10%;
+  background: rgba(255, 238, 0, 0.4);
+  border-color: rgba(255, 238, 0, 0.8);
+  border-radius: 15%;
+}
+
+.turtle-area {
+  left: 64%;
+  top: 52%;
+  width: 8%;
+  height: 10%;
+  background: rgba(0, 204, 102, 0.4);
+  border-color: rgba(0, 204, 102, 0.8);
+  border-radius: 15%;
+}
+
+.peacock-area {
+  left: 56%;
+  top: 66%;
+  width: 8%;
+  height: 10%;
+  background: rgba(102, 51, 204, 0.4);
+  border-color: rgba(102, 51, 204, 0.8);
+  border-radius: 15%;
+}
+
+.butterfly-area {
+  left: 36%;
+  top: 66%;
+  width: 8%;
+  height: 10%;
+  background: rgba(153, 0, 204, 0.4);
+  border-color: rgba(153, 0, 204, 0.8);
+  border-radius: 15%;
+}
+
+/* Outer ring - 11 miraculous in square compartments around the octagon */
+
+/* Top row - from left to right */
+.dragon-area {
+  left: 44%;
+  top: 5%;
+  width: 12%;
+  height: 15%;
+  background: rgba(204, 0, 0, 0.4);
+  border-color: rgba(204, 0, 0, 0.8);
+  border-radius: 8px;
+}
+
+.horse-area {
+  left: 73%;
+  top: 8%;
+  width: 12%;
+  height: 15%;
+  background: rgba(153, 102, 51, 0.4);
+  border-color: rgba(153, 102, 51, 0.8);
+  border-radius: 8px;
+}
+
+.snake-area {
+  left: 88%;
+  top: 8%;
+  width: 12%;
+  height: 15%;
+  background: rgba(0, 204, 204, 0.4);
+  border-color: rgba(0, 204, 204, 0.8);
+  border-radius: 8px;
+}
+
+/* Right side - from top to bottom */
+.monkey-area {
+  left: 85%;
+  top: 30%;
+  width: 12%;
+  height: 15%;
+  background: rgba(255, 153, 0, 0.4);
+  border-color: rgba(255, 153, 0, 0.8);
+  border-radius: 8px;
+}
+
+.rooster-area {
+  left: 85%;
+  top: 55%;
+  width: 12%;
+  height: 15%;
+  background: rgba(51, 102, 255, 0.4);
+  border-color: rgba(51, 102, 255, 0.8);
+  border-radius: 8px;
+}
+
+/* Bottom row - from right to left */
+.dog-area {
+  left: 73%;
+  top: 77%;
+  width: 12%;
+  height: 15%;
+  background: rgba(255, 102, 153, 0.4);
+  border-color: rgba(255, 102, 153, 0.8);
+  border-radius: 8px;
+}
+
+.pig-area {
+  left: 44%;
+  top: 80%;
+  width: 12%;
+  height: 15%;
+  background: rgba(255, 153, 204, 0.4);
+  border-color: rgba(255, 153, 204, 0.8);
+  border-radius: 8px;
+}
+
+.ox-area {
+  left: 15%;
+  top: 77%;
+  width: 12%;
+  height: 15%;
+  background: rgba(255, 204, 51, 0.4);
+  border-color: rgba(255, 204, 51, 0.8);
+  border-radius: 8px;
+}
+
+.mouse-area {
+  left: 0%;
+  top: 77%;
+  width: 12%;
+  height: 15%;
+  background: rgba(255, 153, 153, 0.4);
+  border-color: rgba(255, 153, 153, 0.8);
+  border-radius: 8px;
+}
+
+/* Left side - from bottom to top */
+.tiger-area {
+  left: 3%;
+  top: 55%;
+  width: 12%;
+  height: 15%;
+  background: rgba(255, 153, 51, 0.4);
+  border-color: rgba(255, 153, 51, 0.8);
+  border-radius: 8px;
+}
+
+.rabbit-area {
+  left: 3%;
+  top: 30%;
+  width: 12%;
+  height: 15%;
+  background: rgba(255, 102, 204, 0.4);
+  border-color: rgba(255, 102, 204, 0.8);
+  border-radius: 8px;
+}
+
+/* Top-left corner */
+.goat-area {
+  left: 28%;
+  top: 15%;
+  width: 12%;
+  height: 15%;
+  background: rgba(51, 204, 204, 0.4);
+  border-color: rgba(51, 204, 204, 0.8);
+  border-radius: 8px;
+}
+
+/* Buttons */
+.deselect-btn, .close-btn, .close-btn-center {
+  padding: 1rem 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.deselect-btn {
+  border-color: rgba(124, 77, 255, 0.5);
+  background: rgba(124, 77, 255, 0.2);
+}
+
+.close-btn, .close-btn-center {
+  border-color: rgba(255, 105, 97, 0.5);
+  background: rgba(255, 105, 97, 0.2);
+}
+
+.deselect-btn:hover {
+  background: rgba(124, 77, 255, 0.3);
+  border-color: rgba(124, 77, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.close-btn:hover, .close-btn-center:hover {
+  background: rgba(255, 105, 97, 0.3);
+  border-color: rgba(255, 105, 97, 0.7);
+  transform: translateY(-2px);
+}
+
+.close-btn-center {
+  margin-top: 1rem;
+  width: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .character-view {
+    flex-direction: column;
+  }
+  
+  .box-section-simple {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-icon {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .box-image-clickable img {
+    width: 400px;
+  }
+  
+  .box-selection-view h1 {
+    font-size: 2.5rem;
+  }
+}

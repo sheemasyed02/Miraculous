@@ -1,0 +1,838 @@
+/* Authentic Miraculous Box - Exact Match to Show with Real Jewelry */
+
+/* Main Container Styles - Vintage Miraculous Theme */
+.replica-closed-view,
+.replica-box-view,
+.replica-character-view {
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    #f8f3e8 0%,    /* Vintage cream */
+    #f0e6d2 25%,   /* Warm beige */
+    #e8dcc6 50%,   /* Soft gold */
+    #f5f0e4 75%,   /* Light cream */
+    #faf7f2 100%   /* Warm white */
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  overflow-x: hidden;
+}
+
+/* Closed Box - Vintage Style */
+.replica-closed-container {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(248, 243, 232, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(139, 69, 19, 0.2);
+  border-radius: 20px;
+  box-shadow: 
+    0 15px 40px rgba(139, 69, 19, 0.15),
+    0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.replica-closed-box {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.replica-closed-box:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.replica-closed-box img {
+  width: 280px;
+  height: 280px;
+  filter: drop-shadow(0 10px 20px rgba(139, 69, 19, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.replica-closed-box:hover img {
+  filter: drop-shadow(0 15px 30px rgba(139, 69, 19, 0.3));
+}
+
+.replica-instruction {
+  color: #8B4513;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Box View Layout */
+.replica-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.replica-container h1 {
+  color: #8B4513;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
+}
+
+/* Character View Layout */
+.replica-character-view {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  gap: 0;
+}
+
+.replica-box-section {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: rgba(248, 243, 232, 0.6);
+  backdrop-filter: blur(10px);
+  border-right: 2px solid rgba(139, 69, 19, 0.1);
+}
+
+.replica-character-section {
+  flex: 1;
+  padding: 3rem;
+  background: rgba(248, 243, 232, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+/* Authentic Miraculous Box - Matching Real Image */
+.replica-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.miraculous-box-replica {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  background: radial-gradient(circle at 40% 30%, 
+    #D2B48C 0%,    /* Tan */
+    #CD853F 20%,   /* Peru */
+    #A0522D 40%,   /* Sienna */
+    #8B4513 60%,   /* Saddle Brown */
+    #654321 80%,   /* Dark Brown */
+    #5D4037 100%   /* Brown 800 */
+  );
+  border-radius: 50%;
+  border: 6px solid #3E2723;
+  box-shadow: 
+    0 0 30px rgba(62, 39, 35, 0.4),
+    inset 0 0 50px rgba(210, 180, 140, 0.3),
+    0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  transition: all 0.3s ease;
+}
+
+.miraculous-box-replica:hover {
+  transform: scale(1.01);
+  box-shadow: 
+    0 0 40px rgba(62, 39, 35, 0.5),
+    inset 0 0 60px rgba(210, 180, 140, 0.4),
+    0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Vintage Wood Texture Effect */
+.miraculous-box-replica::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 69, 19, 0.1) 2px,
+      rgba(139, 69, 19, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 8px,
+      rgba(101, 67, 33, 0.1) 8px,
+      rgba(101, 67, 33, 0.1) 12px
+    );
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Center Circle - Both Ladybug and Cat Noir miraculous */
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, 
+    #8B4513 0%,
+    #A0522D 30%,
+    #CD853F 70%,
+    #D2B48C 100%
+  );
+  border-radius: 50%;
+  border: 4px solid #3E2723;
+  box-shadow: 
+    0 0 20px rgba(62, 39, 35, 0.4),
+    inset 0 0 20px rgba(210, 180, 140, 0.3);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Miraculous Jewelry Styling */
+.miraculous-jewel {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 50%;
+  background: rgba(248, 243, 232, 0.9);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 2px 5px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.miraculous-jewel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.miraculous-jewel:hover {
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    inset 0 3px 8px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.5);
+  z-index: 100;
+}
+
+.miraculous-jewel:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Center Jewels */
+.center-jewel-ladybug,
+.center-jewel-cat {
+  width: 55px;
+  height: 55px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Inner Hexagonal Ring - 5 miraculous in authentic positions */
+.inner-hexagon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  z-index: 20;
+}
+
+.inner-jewel {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 3px solid rgba(139, 69, 19, 0.4);
+}
+
+/* Inner miraculous positions - matching real box exactly */
+.inner-top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.inner-top-right {
+  top: 20%;
+  right: 8%;
+}
+
+.inner-bottom-right {
+  bottom: 25%;
+  right: 12%;
+}
+
+.inner-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.inner-left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* Outer Ring - 12 miraculous in large rectangular compartments */
+.outer-jewel {
+  position: absolute;
+  width: 110px;
+  height: 85px;
+  border: 4px solid #3E2723;
+  border-radius: 8px;
+  background: rgba(210, 180, 140, 0.8);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    inset 0 2px 8px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.outer-jewel:hover {
+  transform: scale(1.1) translateY(-6px);
+  box-shadow: 
+    0 12px 35px rgba(0, 0, 0, 0.35),
+    inset 0 4px 12px rgba(255, 255, 255, 0.3),
+    0 0 25px rgba(255, 255, 255, 0.4);
+  border-color: #5D4037;
+  z-index: 50;
+}
+
+.outer-jewel img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+/* Outer compartment positions - exact match to real miraculous box */
+.compartment-top-left {
+  top: -42px;
+  left: 85px;
+}
+
+.compartment-top-center {
+  top: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.compartment-top-right {
+  top: -42px;
+  right: 85px;
+}
+
+.compartment-right-top {
+  top: 85px;
+  right: -55px;
+}
+
+.compartment-right-bottom {
+  bottom: 85px;
+  right: -55px;
+}
+
+.compartment-bottom-right {
+  bottom: -42px;
+  right: 85px;
+}
+
+.compartment-bottom-center {
+  bottom: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.compartment-bottom-left {
+  bottom: -42px;
+  left: 85px;
+}
+
+.compartment-left-bottom {
+  bottom: 85px;
+  left: -55px;
+}
+
+.compartment-left-center {
+  top: 50%;
+  left: -55px;
+  transform: translateY(-50%);
+}
+
+.compartment-left-top {
+  top: 85px;
+  left: -55px;
+}
+
+.compartment-snake {
+  top: 65px;
+  right: 25px;
+}
+
+/* Outer Ring Compartments - Large rectangular compartments as in real image */
+.outer-compartment {
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 4px solid #654321;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    inset 0 2px 8px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.outer-compartment:hover {
+  transform: scale(1.1) translateY(-6px);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    inset 0 4px 12px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.4);
+  border-color: #8B4513;
+  z-index: 15;
+}
+
+.compartment-content {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.compartment-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    transparent 50%, 
+    rgba(0, 0, 0, 0.1) 100%);
+  z-index: 1;
+}
+
+/* Outer compartment positions - Based on real miraculous box image */
+
+/* Top Row - 3 compartments */
+.compartment-top-left {
+  top: -45px;
+  left: 80px;
+  background: linear-gradient(135deg, #e1bee7, #ba68c8, #9c27b0); /* Rabbit - Purple */
+}
+
+.compartment-top-center {
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ffcdd2, #ef5350, #d32f2f); /* Dragon - Red */
+}
+
+.compartment-top-right {
+  top: -45px;
+  right: 80px;
+  background: linear-gradient(135deg, #d7ccc8, #a1887f, #6d4c41); /* Horse - Brown */
+}
+
+/* Right Side - 2 compartments */
+.compartment-right-top {
+  top: 80px;
+  right: -60px;
+  background: linear-gradient(135deg, #ffe0b2, #ffb74d, #ff9800); /* Monkey - Orange */
+}
+
+.compartment-right-bottom {
+  bottom: 80px;
+  right: -60px;
+  background: linear-gradient(135deg, #bbdefb, #42a5f5, #1976d2); /* Rooster - Blue */
+}
+
+/* Bottom Row - 3 compartments */
+.compartment-bottom-right {
+  bottom: -45px;
+  right: 80px;
+  background: linear-gradient(135deg, #f5f5f5, #9e9e9e, #616161); /* Dog - Gray */
+}
+
+.compartment-bottom-center {
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #f8bbd9, #f06292, #e91e63); /* Pig - Pink */
+}
+
+.compartment-bottom-left {
+  bottom: -45px;
+  left: 80px;
+  background: linear-gradient(135deg, #fff9c4, #fff176, #f57f17); /* Ox - Yellow */
+}
+
+/* Left Side - 2 compartments */
+.compartment-left-bottom {
+  bottom: 80px;
+  left: -60px;
+  background: linear-gradient(135deg, #d1c4e9, #9575cd, #673ab7); /* Tiger - Purple */
+}
+
+.compartment-left-bottom .compartment-content {
+  background: inherit;
+}
+
+.compartment-left-center {
+  top: 50%;
+  left: -60px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #e91e63, #c2185b, #880e4f); /* Mouse - Pink */
+}
+
+.compartment-left-top {
+  top: 80px;
+  left: -60px;
+  background: linear-gradient(135deg, #b2dfdb, #4db6ac, #00695c); /* Goat - Teal */
+}
+
+.compartment-left-top .compartment-content {
+  background: inherit;
+}
+
+/* Snake - Special position to complete the 12 */
+.compartment-snake {
+  top: 60px;
+  right: 20px;
+  background: linear-gradient(135deg, #00bcd4, #0097a7, #006064); /* Snake - Cyan */
+}
+
+.compartment-left-center .compartment-content,
+.compartment-snake .compartment-content {
+  background: inherit;
+}
+
+/* Beautiful Controls - Elegant Design */
+.replica-controls {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.replica-close-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #a855f7 0%, #8b5cf6 50%, #7c3aed 100%);
+  color: white;
+  border: 2px solid rgba(168, 85, 247, 0.3);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 6px 20px rgba(168, 85, 247, 0.2),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.replica-close-btn:hover {
+  background: linear-gradient(135deg, #9333ea 0%, #7c3aed 50%, #6d28d9 100%);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 10px 30px rgba(168, 85, 247, 0.3),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+/* Responsive Design - Mobile Friendly */
+@media (max-width: 1200px) {
+  .replica-character-view {
+    flex-direction: column;
+  }
+  
+  .replica-box-section {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .miraculous-box-replica {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .center-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .center-slot-ladybug,
+  .center-slot-cat {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .inner-hexagon {
+    width: 270px;
+    height: 270px;
+  }
+  
+  .inner-compartment {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .outer-compartment {
+    width: 100px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .replica-container {
+    padding: 1rem;
+  }
+  
+  .replica-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .miraculous-box-replica {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .center-circle {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .center-slot-ladybug,
+  .center-slot-cat {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .inner-hexagon {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .inner-compartment {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .outer-compartment {
+    width: 80px;
+    height: 60px;
+  }
+  
+  .replica-closed-box img {
+    width: 220px;
+    height: 220px;
+  }
+  
+  /* Adjust outer compartment positions for mobile */
+  .compartment-top-left,
+  .compartment-top-right {
+    top: -35px;
+  }
+  
+  .compartment-top-center {
+    top: -40px;
+  }
+  
+  .compartment-bottom-left,
+  .compartment-bottom-right {
+    bottom: -35px;
+  }
+  
+  .compartment-bottom-center {
+    bottom: -40px;
+  }
+  
+  .compartment-right-top,
+  .compartment-right-bottom {
+    right: -40px;
+  }
+  
+/* Control Buttons - Vintage Style */
+.replica-controls {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.replica-close-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #654321 100%);
+  color: #F5F5DC;
+  border: 3px solid #3E2723;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 6px 20px rgba(139, 69, 19, 0.3),
+    inset 0 2px 5px rgba(245, 245, 220, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.replica-close-btn:hover {
+  background: linear-gradient(135deg, #A0522D 0%, #8B4513 50%, #654321 100%);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 10px 30px rgba(139, 69, 19, 0.4),
+    inset 0 3px 8px rgba(245, 245, 220, 0.3);
+  border-color: #5D4037;
+}
+
+/* Responsive Design - Vintage Theme */
+@media (max-width: 1200px) {
+  .replica-character-view {
+    flex-direction: column;
+  }
+  
+  .replica-box-section {
+    flex: none;
+    border-right: none;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.1);
+  }
+  
+  .miraculous-box-replica {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .center-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .center-jewel-ladybug,
+  .center-jewel-cat {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .inner-hexagon {
+    width: 270px;
+    height: 270px;
+  }
+  
+  .inner-jewel {
+    width: 58px;
+    height: 58px;
+  }
+  
+  .outer-jewel {
+    width: 95px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .replica-container {
+    padding: 1rem;
+  }
+  
+  .replica-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .miraculous-box-replica {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .center-circle {
+    width: 85px;
+    height: 85px;
+    gap: 8px;
+  }
+  
+  .center-jewel-ladybug,
+  .center-jewel-cat {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .inner-hexagon {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .inner-jewel {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .outer-jewel {
+    width: 75px;
+    height: 58px;
+  }
+  
+  .replica-closed-box img {
+    width: 220px;
+    height: 220px;
+  }
+  
+  /* Adjust outer compartment positions for mobile */
+  .compartment-top-left,
+  .compartment-top-right {
+    top: -30px;
+  }
+  
+  .compartment-top-center {
+    top: -35px;
+  }
+  
+  .compartment-bottom-left,
+  .compartment-bottom-right {
+    bottom: -30px;
+  }
+  
+  .compartment-bottom-center {
+    bottom: -35px;
+  }
+  
+  .compartment-right-top,
+  .compartment-right-bottom {
+    right: -38px;
+  }
+  
+  .compartment-left-bottom,
+  .compartment-left-center,
+  .compartment-left-top {
+    left: -38px;
+  }
+  
+  .compartment-snake {
+    top: 50px;
+    right: 15px;
+  }
+}
