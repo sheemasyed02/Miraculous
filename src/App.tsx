@@ -27,6 +27,10 @@ function App() {
 
   return (
     <div className="app">
+      <header className="app-header">
+        <img src={miraculousIcon} alt="Miraculous Box" className="app-logo" />
+      </header>
+      
       <AnimatePresence mode="wait">
         <motion.div 
           className="app-container"
