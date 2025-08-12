@@ -180,11 +180,19 @@
   text-transform: lowercase;
 }
 
+.character-image-and-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
 .character-image-container {
   position: relative;
   width: 450px;
   height: 450px;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   z-index: 1;
 }
 
@@ -224,20 +232,36 @@
 .character-name {
   color: #f8bbd0;
   font-size: 2.8rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   margin: 0.5rem 0 0.2rem 0;
   font-family: 'Poppins', 'SF Pro Display', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.5px;
   background: linear-gradient(135deg, #f8bbd0 0%, #e8a8c8 50%, #d4a5a5 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: none;
-  line-height: 1.1;
-  text-transform: uppercase;
+  line-height: 1.2;
+  text-transform: none;
   font-feature-settings: 'kern' 1, 'liga' 1;
   position: relative;
+}
+
+.character-name-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 1.8rem !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  letter-spacing: 0.3px !important;
+  text-transform: none !important;
 }
 
 .transformation-phrase {
@@ -1599,15 +1623,30 @@
     min-height: 350px;
   }
   
+  .character-image-and-name-container {
+    gap: 1rem;
+  }
+  
   .character-image-container {
     width: 320px;
     height: 320px;
     margin-bottom: 0.8rem;
   }
   
+  .character-name-vertical {
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
+    height: 280px;
+    letter-spacing: 0.2px !important;
+    text-transform: none !important;
+  }
+  
   .character-name {
     font-size: 2.2rem;
+    font-weight: 400;
     margin: 0.3rem 0 0.1rem 0;
+    letter-spacing: 0.3px;
+    text-transform: none;
   }
   
   .kwami-image {
@@ -1642,15 +1681,35 @@
     min-height: 300px;
   }
   
+  .character-image-and-name-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
   .character-image-container {
     width: 250px;
     height: 250px;
     margin-bottom: 0.5rem;
   }
   
+  .character-name-vertical {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    height: auto;
+    text-align: center;
+    letter-spacing: 0.2px !important;
+    text-transform: none !important;
+  }
+  
   .character-name {
     font-size: 1.8rem;
+    font-weight: 400;
     margin: 0.2rem 0 0.1rem 0;
+    letter-spacing: 0.2px;
+    text-transform: none;
   }
   
   .kwami-image {

@@ -281,46 +281,48 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
             </div>
           </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`${character.id}-${transformationState}`}
-              className="character-image-container"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
-            >
-              <img
-                src={getCurrentImage()}
-                alt={getCurrentName()}
-                className="character-image"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = `data:image/svg+xml;base64,${btoa(`
-                    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="200" height="200" fill="${character.kwami.color || '#953ca0'}" opacity="0.3" rx="20"/>
-                      <text x="100" y="100" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
-                        ${getCurrentName()}
-                      </text>
-                    </svg>
-                  `)}`;
-                }}
-              />
-              {transformationState === 'power-up' && (
-                <div className="power-up-aura" style={{ backgroundColor: character.kwami.color || '#ffcc00' }} />
-              )}
-            </motion.div>
-          </AnimatePresence>
+          <div className="character-image-and-name-container">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${character.id}-${transformationState}`}
+                className="character-image-container"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
+              >
+                <img
+                  src={getCurrentImage()}
+                  alt={getCurrentName()}
+                  className="character-image"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = `data:image/svg+xml;base64,${btoa(`
+                      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="${character.kwami.color || '#953ca0'}" opacity="0.3" rx="20"/>
+                        <text x="100" y="100" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
+                          ${getCurrentName()}
+                        </text>
+                      </svg>
+                    `)}`;
+                  }}
+                />
+                {transformationState === 'power-up' && (
+                  <div className="power-up-aura" style={{ backgroundColor: character.kwami.color || '#ffcc00' }} />
+                )}
+              </motion.div>
+            </AnimatePresence>
 
-          <motion.h2
-            className="character-name"
-            key={getCurrentName()}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
-          >
-            {getCurrentName()}
-          </motion.h2>
+            <motion.h2
+              className="character-name character-name-vertical"
+              key={getCurrentName()}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+            >
+              {getCurrentName()}
+            </motion.h2>
+          </div>
 
           <motion.div
             className="transformation-phrase"
