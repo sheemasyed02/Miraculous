@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0;
-  min-height: 400px;
+  min-height: 200px;
   width: 100%;
   position: relative;
   overflow: visible;
@@ -301,7 +301,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: -3rem;
+  margin-top: -1.5rem;
 }
 
 /* Vintage Transformation Animation */
@@ -1402,7 +1402,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: -3rem;
+  margin-top: -1.5rem;
 }
 
 /* Transformation animation */
@@ -1620,8 +1620,8 @@
 /* Media queries */
 @media (max-width: 768px) {
   .character-display {
-    padding: 1.5rem;
-    min-height: 350px;
+    padding: 1rem;
+    min-height: 250px;
   }
   
   .character-image-and-name-container {
@@ -1679,8 +1679,8 @@
 
 @media (max-width: 480px) {
   .character-display {
-    padding: 1rem;
-    min-height: 300px;
+    padding: 0.5rem;
+    min-height: 200px;
   }
   
   .character-image-and-name-container {

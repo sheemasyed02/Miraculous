@@ -107,7 +107,8 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent;
-  padding: 80px 120px 80px 80px;
+  padding: 0;
+  margin: 0;
   position: relative;
   box-sizing: border-box;
 }
@@ -188,7 +189,7 @@ body {
 }
 
 .replica-instruction {
-  margin-top: 3rem;
+  margin-top: 0;
   font-size: 1.4rem;
   color: #8b5a7a;
   font-weight: 600;
@@ -266,7 +267,7 @@ body {
   border-radius: 0;
   border: none;
   box-shadow: none;
-  padding: 2.5rem;
+  padding: 0;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -284,7 +285,7 @@ body {
     width: 95vw;
     min-height: 380px;
     border-radius: 24px;
-    padding: 1.5rem;
+    padding: 0;
     gap: 1.2rem 1.2rem;
     grid-template-rows: 1fr auto 1fr;
     grid-template-columns: 1fr 1fr;
@@ -296,7 +297,7 @@ body {
     width: 99vw;
     min-height: 260px;
     border-radius: 16px;
-    padding: 0.5rem;
+    padding: 0;
     gap: 0.5rem 0.5rem;
     grid-template-rows: 1fr auto 1fr;
     grid-template-columns: 1fr;
@@ -874,7 +875,7 @@ body {
 
 /* ✨ ELEGANT CONTROLS ✨ */
 .replica-controls {
-  margin-top: 3rem;
+  margin-top: 0;
   display: flex;
   justify-content: center;
 }
@@ -945,7 +946,7 @@ body {
     flex-direction: column;
     gap: 3rem;
     align-items: center;
-    padding: 2rem;
+    padding: 0;
   }
   
   .replica-box-section {
@@ -999,11 +1000,11 @@ body {
   }
   
   .replica-character-view {
-    padding: 1.5rem;
+    padding: 0;
   }
   
   .replica-character-section {
-    padding: 2rem;
+    padding: 0;
     border-radius: 25px;
   }
   
@@ -1046,7 +1047,7 @@ body {
   
   .replica-instruction {
     font-size: 1.2rem;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 }
 
@@ -1056,7 +1057,7 @@ body {
   }
   
   .replica-character-view {
-    padding: 1rem;
+    padding: 0;
   }
   
   .replica-character-section {

@@ -54,6 +54,8 @@
   font-family: 'Inter', 'Georgia', serif;
   color: var(--text-primary);
   line-height: 1.7;
+  margin: 0;
+  padding: 0;
 }
 
 /* Vintage Background Pattern */
@@ -86,6 +88,7 @@
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: 0;
 }
 
 /* Remove Header Completely */
@@ -99,7 +102,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 0;
+  margin: 0;
   position: relative;
   min-height: 100vh;
 }
@@ -177,7 +181,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .app-main {
-    padding: 1rem;
+    padding: 0;
   }
   
   .sound-toggle {
@@ -190,7 +194,7 @@
 
 @media (max-width: 480px) {
   .app-main {
-    padding: 0.5rem;
+    padding: 0;
   }
 }
 
@@ -246,7 +250,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .app-main {
-    padding: 5rem 1.5rem 2rem;
+    padding: 0;
   }
 }
 
@@ -264,7 +268,7 @@
   }
   
   .app-main {
-    padding: 4rem 1rem 2rem;
+    padding: 0;
   }
   
   .app-footer {
@@ -282,7 +286,7 @@
   }
   
   .app-main {
-    padding: 3.5rem 0.75rem 1.5rem;
+    padding: 0;
   }
 }
 
