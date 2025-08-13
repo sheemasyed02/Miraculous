@@ -199,8 +199,8 @@
 
 .character-image-container {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 520px;
+  height: 520px;
   margin-bottom: 0;
   margin-right: -3rem;
   z-index: 1;
@@ -266,7 +266,7 @@
   font-size: 1.8rem !important;
   font-weight: 400 !important;
   margin: 0 0 0 -4rem !important;
-  height: 350px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1812,15 +1812,15 @@
   }
   
   .character-image-container {
-    width: 320px;
-    height: 320px;
+    width: 380px;
+    height: 380px;
     margin-bottom: 0;
   }
   
   .character-name-vertical {
     font-size: 1.4rem !important;
     font-weight: 400 !important;
-    height: 280px;
+    height: 340px;
     letter-spacing: 0.2px !important;
     text-transform: none !important;
     margin: 0 0 0 -1.5rem !important;
@@ -1878,8 +1878,8 @@
   }
   
   .character-image-container {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     margin-bottom: 0;
   }
   
