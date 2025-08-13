@@ -160,13 +160,14 @@
 }
 
 .kwami-name {
-  color: #f8bbd0;
+  color: var(--accent-color, #f8bbd0);
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 0.3rem 0;
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
   letter-spacing: 0.5px;
   text-shadow: 0 1px 4px rgba(255, 182, 193, 0.1);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .kwami-element {
@@ -264,6 +265,9 @@
   white-space: nowrap;
   letter-spacing: 0.3px !important;
   text-transform: none !important;
+  color: var(--accent-color, #8b5a7a) !important;
+  text-shadow: 0 2px 8px rgba(139, 90, 122, 0.3) !important;
+  transition: color 0.3s ease, text-shadow 0.3s ease !important;
 }
 
 .transformation-phrase {
@@ -569,13 +573,15 @@
 }
 
 .character-name {
-  color: #2c2c2c;
+  color: var(--accent-color, #8b5a7a);
   font-size: 1.75rem;
   font-weight: 700;
   text-align: center;
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
   letter-spacing: 0.3px;
+  text-shadow: 0 2px 8px rgba(139, 90, 122, 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .transformation-phrase {
@@ -604,6 +610,139 @@
   align-items: center;
   width: 100%;
   margin-top: 0;
+}
+
+/* Character-Specific Kwami Colors for Names */
+/* Cat Noir - Elegant black with subtle shadow */
+[data-character="cat"] .character-name,
+[data-character="cat"] .character-name-vertical {
+  color: #2c2c2c !important;
+  text-shadow: 0 2px 8px rgba(44, 44, 44, 0.4) !important;
+}
+
+[data-character="cat"] .kwami-name {
+  color: #2c2c2c !important;
+  text-shadow: 0 1px 4px rgba(44, 44, 44, 0.3) !important;
+}
+
+/* Viperion - Soft teal green */
+[data-character="snake"] .character-name,
+[data-character="snake"] .character-name-vertical {
+  color: #4a9b8e !important;
+  text-shadow: 0 2px 8px rgba(74, 155, 142, 0.4) !important;
+}
+
+[data-character="snake"] .kwami-name {
+  color: #4a9b8e !important;
+  text-shadow: 0 1px 4px rgba(74, 155, 142, 0.3) !important;
+}
+
+/* Vesperia - Readable golden yellow */
+[data-character="bee"] .character-name,
+[data-character="bee"] .character-name-vertical {
+  color: #d4a017 !important;
+  text-shadow: 0 2px 8px rgba(212, 160, 23, 0.5) !important;
+}
+
+[data-character="bee"] .kwami-name {
+  color: #d4a017 !important;
+  text-shadow: 0 1px 4px rgba(212, 160, 23, 0.4) !important;
+}
+
+/* Mayura - Light navy blue */
+[data-character="peacock"] .character-name,
+[data-character="peacock"] .character-name-vertical {
+  color: #5b7db8 !important;
+  text-shadow: 0 2px 8px rgba(91, 125, 184, 0.4) !important;
+}
+
+[data-character="peacock"] .kwami-name {
+  color: #5b7db8 !important;
+  text-shadow: 0 1px 4px rgba(91, 125, 184, 0.3) !important;
+}
+
+/* Bunnyx - Readable sky blue */
+[data-character="rabbit"] .character-name,
+[data-character="rabbit"] .character-name-vertical {
+  color: #5ba3d4 !important;
+  text-shadow: 0 2px 8px rgba(91, 163, 212, 0.4) !important;
+}
+
+[data-character="rabbit"] .kwami-name {
+  color: #5ba3d4 !important;
+  text-shadow: 0 1px 4px rgba(91, 163, 212, 0.3) !important;
+}
+
+/* Rooster Bold - Golden orange */
+[data-character="rooster"] .character-name,
+[data-character="rooster"] .character-name-vertical {
+  color: #d48806 !important;
+  text-shadow: 0 2px 8px rgba(212, 136, 6, 0.5) !important;
+}
+
+[data-character="rooster"] .kwami-name {
+  color: #d48806 !important;
+  text-shadow: 0 1px 4px rgba(212, 136, 6, 0.4) !important;
+}
+
+/* Miss Hound - Light orange */
+[data-character="dog"] .character-name,
+[data-character="dog"] .character-name-vertical {
+  color: #e67e22 !important;
+  text-shadow: 0 2px 8px rgba(230, 126, 34, 0.4) !important;
+}
+
+[data-character="dog"] .kwami-name {
+  color: #e67e22 !important;
+  text-shadow: 0 1px 4px rgba(230, 126, 34, 0.3) !important;
+}
+
+/* Minotaurox - Navy blue like Mayura */
+[data-character="ox"] .character-name,
+[data-character="ox"] .character-name-vertical {
+  color: #5b7db8 !important;
+  text-shadow: 0 2px 8px rgba(91, 125, 184, 0.4) !important;
+}
+
+[data-character="ox"] .kwami-name {
+  color: #5b7db8 !important;
+  text-shadow: 0 1px 4px rgba(91, 125, 184, 0.3) !important;
+}
+
+/* Purple Tigress - Maroon */
+[data-character="tiger"] .character-name,
+[data-character="tiger"] .character-name-vertical {
+  color: #9b2c2c !important;
+  text-shadow: 0 2px 8px rgba(155, 44, 44, 0.4) !important;
+}
+
+[data-character="tiger"] .kwami-name {
+  color: #9b2c2c !important;
+  text-shadow: 0 1px 4px rgba(155, 44, 44, 0.3) !important;
+}
+
+/* Polymouse - Sophisticated grey */
+[data-character="mouse"] .character-name,
+[data-character="mouse"] .character-name-vertical {
+  color: #6b6b6b !important;
+  text-shadow: 0 2px 8px rgba(107, 107, 107, 0.5) !important;
+}
+
+[data-character="mouse"] .kwami-name {
+  color: #6b6b6b !important;
+  text-shadow: 0 1px 4px rgba(107, 107, 107, 0.4) !important;
+}
+
+/* Caprikid - Black like Cat Noir */
+[data-character="goat"] .character-name,
+[data-character="goat"] .character-name-vertical {
+  color: #2c2c2c !important;
+  text-shadow: 0 2px 8px rgba(44, 44, 44, 0.4) !important;
+}
+
+[data-character="goat"] .kwami-name {
+  color: #2c2c2c !important;
+  text-shadow: 0 1px 4px rgba(44, 44, 44, 0.3) !important;
 }
 
 /* Clean Transformation Animation */
@@ -1191,6 +1330,8 @@
   
   .kwami-name {
     font-size: 1rem;
+    color: var(--accent-color, #f8bbd0);
+    text-shadow: 0 1px 4px rgba(255, 182, 193, 0.1);
   }
   
   .kwami-element {
@@ -1650,6 +1791,8 @@
     margin: 0.3rem 0 0.1rem 0;
     letter-spacing: 0.3px;
     text-transform: none;
+    color: var(--accent-color, #8b5a7a);
+    text-shadow: 0 2px 8px rgba(139, 90, 122, 0.3);
   }
   
   .kwami-image {
@@ -1705,6 +1848,8 @@
     text-align: center;
     letter-spacing: 0.2px !important;
     text-transform: none !important;
+    color: var(--accent-color, #8b5a7a) !important;
+    text-shadow: 0 2px 8px rgba(139, 90, 122, 0.3) !important;
   }
   
   .character-name {
@@ -1713,6 +1858,8 @@
     margin: 0.2rem 0 0.1rem 0;
     letter-spacing: 0.2px;
     text-transform: none;
+    color: var(--accent-color, #8b5a7a);
+    text-shadow: 0 2px 8px rgba(139, 90, 122, 0.3);
   }
   
   .kwami-image {
@@ -1722,6 +1869,8 @@
   
   .kwami-name {
     font-size: 1rem;
+    color: var(--accent-color, #f8bbd0);
+    text-shadow: 0 1px 4px rgba(255, 182, 193, 0.1);
   }
   
   .transforming-animation-inner {

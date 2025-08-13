@@ -227,6 +227,7 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
   return (
     <motion.div
       className="character-display"
+      data-character={character.id}
       initial={{ opacity: 0, x: 300 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0 }}
