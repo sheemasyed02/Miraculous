@@ -733,7 +733,7 @@
   text-shadow: 0 1px 4px rgba(107, 107, 107, 0.4) !important;
 }
 
-/* Caprikid - Black like Cat Noir */
+/* Caprikid - Lighter teal/cyan for better visibility */
 [data-character="goat"] .character-name,
 [data-character="goat"] .character-name-vertical {
   color: #2c2c2c !important;
@@ -741,8 +741,32 @@
 }
 
 [data-character="goat"] .kwami-name {
-  color: #2c2c2c !important;
-  text-shadow: 0 1px 4px rgba(44, 44, 44, 0.3) !important;
+  color: #4a9b8e !important;
+  text-shadow: 0 1px 4px rgba(74, 155, 142, 0.3) !important;
+}
+
+/* Ladybug - Bright red/pink theme */
+[data-character="ladybug"] .character-name,
+[data-character="ladybug"] .character-name-vertical {
+  color: #e74c3c !important;
+  text-shadow: 0 2px 8px rgba(231, 76, 60, 0.4) !important;
+}
+
+[data-character="ladybug"] .kwami-name {
+  color: #ff6b9d !important;
+  text-shadow: 0 1px 4px rgba(255, 107, 157, 0.3) !important;
+}
+
+/* Shadow Moth/Butterfly - Purple theme */
+[data-character="butterfly"] .character-name,
+[data-character="butterfly"] .character-name-vertical {
+  color: #8e44ad !important;
+  text-shadow: 0 2px 8px rgba(142, 68, 173, 0.4) !important;
+}
+
+[data-character="butterfly"] .kwami-name {
+  color: #9b59b6 !important;
+  text-shadow: 0 1px 4px rgba(155, 89, 182, 0.3) !important;
 }
 
 /* Clean Transformation Animation */
