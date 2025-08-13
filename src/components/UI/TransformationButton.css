@@ -96,7 +96,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: var(--text-primary);
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -256,7 +256,7 @@
 /* Vesperia - Readable golden yellow */
 [data-character="bee"] .transformation-button {
   background: linear-gradient(135deg, #d4a017 0%, #f0c341 50%, #d4a017 100%) !important;
-  color: #2c2c2c !important;
+  color: #ffffff !important;
   border: 2px solid #f0c341 !important;
   text-shadow: 0 1px 3px rgba(212, 160, 23, 0.5) !important;
 }
@@ -298,7 +298,7 @@
 /* Rooster Bold - Golden orange */
 [data-character="rooster"] .transformation-button {
   background: linear-gradient(135deg, #d48806 0%, #f0a330 50%, #d48806 100%) !important;
-  color: #2c2c2c !important;
+  color: #ffffff !important;
   border: 2px solid #f0a330 !important;
   text-shadow: 0 1px 3px rgba(212, 136, 6, 0.5) !important;
 }
@@ -337,18 +337,18 @@
   box-shadow: 0 8px 25px rgba(91, 125, 184, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Purple Tigress - Maroon */
+/* Purple Tigress - Light maroon with red mixture */
 [data-character="tiger"] .transformation-button {
-  background: linear-gradient(135deg, #9b2c2c 0%, #c85050 50%, #9b2c2c 100%) !important;
+  background: linear-gradient(135deg, #cd5c5c 0%, #dc7a7a 50%, #cd5c5c 100%) !important;
   color: #ffffff !important;
-  border: 2px solid #c85050 !important;
-  text-shadow: 0 1px 3px rgba(155, 44, 44, 0.5) !important;
+  border: 2px solid #dc7a7a !important;
+  text-shadow: 0 1px 3px rgba(205, 92, 92, 0.5) !important;
 }
 
 [data-character="tiger"] .transformation-button:hover {
-  background: linear-gradient(135deg, #c85050 0%, #f47474 50%, #c85050 100%) !important;
-  border-color: #f47474 !important;
-  box-shadow: 0 8px 25px rgba(155, 44, 44, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.2) !important;
+  background: linear-gradient(135deg, #dc7a7a 0%, #eb9898 50%, #dc7a7a 100%) !important;
+  border-color: #eb9898 !important;
+  box-shadow: 0 8px 25px rgba(205, 92, 92, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Polymouse - Sophisticated grey */
@@ -388,7 +388,7 @@
 }
 
 [data-character="ladybug"] .transformation-button:hover {
-  background: linear-gradient(135deg, #ff6b9d 0%, #ff8bb3 50%, #ff6b9d 100%) !important;
+  background: linear-gradient(135deg, #e95888ff 0%, #ff8bb3 50%, #ff6b9d 100%) !important;
   border-color: #ff8bb3 !important;
   box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.2) !important;
 }
@@ -424,20 +424,20 @@
   transform: scale(1.13) !important;
 }
 
-/* Carapace/Turtle - Green theme */
+/* Carapace/Turtle - Light parrot green theme */
 [data-character="turtle"] .transformation-button {
-  background: linear-gradient(135deg, #00cc66 0%, #33dd88 50%, #00cc66 100%) !important;
+  background: linear-gradient(135deg, #7aaf4eff 0%, #73c059ff 50%, #6da052ff 100%) !important;
   color: #ffffff !important;
-  border: 2px solid #33dd88 !important;
-  text-shadow: 0 1px 3px rgba(0, 204, 102, 0.5) !important;
+  border: 2px solid #77b257ff !important;
+  text-shadow: 0 1px 3px rgba(130, 193, 99, 0.5) !important;
 }
 
 [data-character="turtle"] .transformation-button:hover {
-  background: linear-gradient(135deg, #33dd88 0%, #66eeaa 50%, #33dd88 100%) !important;
-  border-color: #66eeaa !important;
+  background: linear-gradient(135deg, #8fd85fff 0%, #a4e68cff 50%, #83d85fff 100%) !important;
+  border-color: #8ce68c !important;
   box-shadow: 
-    0 8px 32px 0 rgba(0, 204, 102, 0.32),
-    0 2px 8px 0 rgba(0, 204, 102, 0.22) !important;
+    0 8px 32px 0 rgba(120, 205, 50, 0.32),
+    0 2px 8px 0 rgba(120, 205, 50, 0.22) !important;
   transform: scale(1.13) !important;
 }
 

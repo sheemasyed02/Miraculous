@@ -721,16 +721,16 @@
   text-shadow: 0 1px 4px rgba(91, 125, 184, 0.3) !important;
 }
 
-/* Purple Tigress - Maroon */
+/* Purple Tigress - Light maroon with red mixture */
 [data-character="tiger"] .character-name,
 [data-character="tiger"] .character-name-vertical {
-  color: #9b2c2c !important;
-  text-shadow: 0 2px 8px rgba(155, 44, 44, 0.4) !important;
+  color: #cd5c5c !important;
+  text-shadow: 0 2px 8px rgba(205, 92, 92, 0.4) !important;
 }
 
 [data-character="tiger"] .kwami-name {
-  color: #9b2c2c !important;
-  text-shadow: 0 1px 4px rgba(155, 44, 44, 0.3) !important;
+  color: #cd5c5c !important;
+  text-shadow: 0 1px 4px rgba(205, 92, 92, 0.3) !important;
 }
 
 /* Polymouse - Sophisticated grey */
@@ -760,7 +760,7 @@
 /* Ladybug - Bright red/pink theme */
 [data-character="ladybug"] .character-name,
 [data-character="ladybug"] .character-name-vertical {
-  color: #e74c3c !important;
+  color: #c51a1aff !important;
   text-shadow: 0 2px 8px rgba(231, 76, 60, 0.4) !important;
 }
 
@@ -779,6 +779,18 @@
 [data-character="butterfly"] .kwami-name {
   color: #9b59b6 !important;
   text-shadow: 0 1px 4px rgba(155, 89, 182, 0.3) !important;
+}
+
+/* Carapace/Turtle - Light parrot green */
+[data-character="turtle"] .character-name,
+[data-character="turtle"] .character-name-vertical {
+  color: #6ea141ff !important;
+  text-shadow: 0 2px 8px rgba(110, 201, 87, 0.4) !important;
+}
+
+[data-character="turtle"] .kwami-name {
+  color: #66a94eff !important;
+  text-shadow: 0 1px 4px rgba(84, 205, 50, 0.3) !important;
 }
 
 /* Clean Transformation Animation */
