@@ -115,10 +115,12 @@
 
 .character-top-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   margin-bottom: 0;
+  position: relative;
+  margin-left: -2rem;
 }
 
 .kwami-display {
@@ -132,6 +134,10 @@
   padding: 0;
   box-shadow: none;
   transition: all 0.3s ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
 }
 
 .kwami-display:hover {
@@ -186,8 +192,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: -2rem;
   margin-bottom: 0;
+  position: relative;
 }
 
 .character-image-container {
@@ -195,6 +202,7 @@
   width: 450px;
   height: 450px;
   margin-bottom: 0;
+  margin-right: -3rem;
   z-index: 1;
 }
 
@@ -257,7 +265,7 @@
   transform: rotate(180deg);
   font-size: 1.8rem !important;
   font-weight: 400 !important;
-  margin: 0 0 0 -2rem !important;
+  margin: 0 0 0 -4rem !important;
   height: 350px;
   display: flex;
   align-items: center;
@@ -307,6 +315,9 @@
   align-items: center;
   width: 100%;
   margin-top: -1.5rem;
+  position: relative;
+  z-index: 2;
+  margin-left: -2rem;
 }
 
 /* Vintage Transformation Animation */
@@ -536,6 +547,7 @@
   width: 180px;
   height: 180px;
   margin-bottom: 1.5rem;
+  margin-right: -1.5rem;
   z-index: 1;
 }
 
@@ -1295,11 +1307,16 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-left: 0;
+    justify-content: center;
   }
   
   .kwami-display {
     padding: 0;
     border-radius: 0;
+    position: static;
+    left: auto;
+    top: auto;
   }
   
   .character-image-container {
@@ -1828,6 +1845,10 @@
     font-size: 1.1rem;
   }
   
+  .action-section {
+    margin-left: 0;
+  }
+  
   .transforming-animation-inner {
     width: 160px;
     height: 160px;
@@ -1911,5 +1932,9 @@
     width: 90px;
     height: 90px;
     font-size: 1rem;
+  }
+  
+  .action-section {
+    margin-left: 0;
   }
 }
