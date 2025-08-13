@@ -114,8 +114,9 @@ const MiraculousBoxCanonical: React.FC<MiraculousBoxCanonicalProps> = ({
                 const character = characters.find(char => char.id === 'ladybug');
                 return character ? (
                   <div className="tooltip-content">
-                    <div className="kwami-name">Ladybug</div>
-                    <div className="kwami-power">{character.kwami.element}</div>
+                    <div className="miraculous-info">
+                      Ladybug ({character.kwami.element})
+                    </div>
                   </div>
                 ) : null;
               })()}
@@ -133,8 +134,9 @@ const MiraculousBoxCanonical: React.FC<MiraculousBoxCanonicalProps> = ({
                 const character = characters.find(char => char.id === 'cat');
                 return character ? (
                   <div className="tooltip-content">
-                    <div className="kwami-name">Cat</div>
-                    <div className="kwami-power">{character.kwami.element}</div>
+                    <div className="miraculous-info">
+                      Cat ({character.kwami.element})
+                    </div>
                   </div>
                 ) : null;
               })()}
@@ -164,8 +166,9 @@ const MiraculousBoxCanonical: React.FC<MiraculousBoxCanonicalProps> = ({
                   const character = characters.find(char => char.id === miraculousId);
                   return character ? (
                     <div className="tooltip-content">
-                      <div className="kwami-name">{miraculousId.charAt(0).toUpperCase() + miraculousId.slice(1)}</div>
-                      <div className="kwami-power">{character.kwami.element}</div>
+                      <div className="miraculous-info">
+                        {miraculousId.charAt(0).toUpperCase() + miraculousId.slice(1)} ({character.kwami.element})
+                      </div>
                     </div>
                   ) : null;
                 })()}
