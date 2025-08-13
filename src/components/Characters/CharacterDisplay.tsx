@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Character } from '../../types';
 import TransformationButton from '../UI/TransformationButton';
@@ -7,14 +7,6 @@ import './CharacterDisplay.css';
 
 interface CharacterDisplayProps {
   character: Character | null;
-}
-
-interface Sparkle {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  color: string;
 }
 
 const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
@@ -27,63 +19,7 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
     powerOff
   } = useTransformation(character);
   
-  const [sparkles, setSparkles] = useState<Sparkle[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Create sparkles for transformation effect
-  useEffect(() => {
-    if (isTransforming && containerRef.current) {
-      const container = containerRef.current;
-      const containerRect = container.getBoundingClientRect();
-      
-      // Clear existing sparkles
-      setSparkles([]);
-      
-      // Create new sparkles
-      const interval = setInterval(() => {
-        const newSparkles: Sparkle[] = [];
-        for (let i = 0; i < 5; i++) {
-          const sparkleX = Math.random() * containerRect.width;
-          const sparkleY = Math.random() * containerRect.height;
-          const sparkleSize = Math.random() * 10 + 4;
-          const colors = [
-            'rgba(255, 204, 0, 0.8)',   // Gold
-            character?.id === 'ladybug' ? 'rgba(230, 57, 70, 0.8)' : 'rgba(255, 204, 0, 0.8)', // Ladybug red
-            character?.id === 'cat' ? 'rgba(42, 157, 143, 0.8)' : 'rgba(255, 204, 0, 0.8)',   // Cat Noir green
-            'rgba(255, 255, 255, 0.8)',  // White
-          ];
-          const sparkleColor = colors[Math.floor(Math.random() * colors.length)];
-          
-          newSparkles.push({
-            id: Date.now() + i,
-            x: sparkleX,
-            y: sparkleY,
-            size: sparkleSize,
-            color: sparkleColor
-          });
-        }
-        
-        setSparkles(prev => [...prev, ...newSparkles]);
-      }, 200);
-      
-      // Clean up interval and sparkles
-      return () => {
-        clearInterval(interval);
-        setSparkles([]);
-      };
-    }
-  }, [isTransforming, character]);
-  
-  // Clean up sparkles after they animate
-  useEffect(() => {
-    if (sparkles.length > 0) {
-      const timer = setTimeout(() => {
-        setSparkles(prev => prev.slice(5));
-      }, 1500);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [sparkles]);
 
   if (!character) {
     return (
@@ -215,22 +151,6 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
       } as React.CSSProperties}
       ref={containerRef}
     >
-      {/* Render sparkles */}
-      {sparkles.map(sparkle => (
-        <div
-          key={sparkle.id}
-          className="sparkle"
-          style={{
-            left: `${sparkle.x}px`,
-            top: `${sparkle.y}px`,
-            width: `${sparkle.size}px`,
-            height: `${sparkle.size}px`,
-            backgroundColor: sparkle.color,
-            boxShadow: `0 0 ${sparkle.size * 2}px ${sparkle.color}`
-          }}
-        />
-      ))}
-
       <div className="character-info">
         <div className="character-content">
           <div className="character-top-row">
@@ -297,6 +217,7 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
                     `)}`;
                   }}
                 />
+                
                 {transformationState === 'power-up' && (
                   <div className="power-up-aura" style={{ backgroundColor: character.kwami.color || '#ffcc00' }} />
                 )}
