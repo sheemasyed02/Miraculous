@@ -1,70 +1,61 @@
-/* VINTAGE PINKISH TRANSFORMATION BUTTON - PARALLELOGRAM CRYSTAL GLASS */
+/* SOFT VINTAGE TRANSFORMATION BUTTON - MATCHING PROJECT AESTHETIC */
 
 .transformation-button {
   --button-color: var(--rose-gold);
-  padding: 1.125rem 2.5rem;
-  border: 2px solid rgba(232, 180, 184, 0.2);
-  border-radius: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 1rem 2.25rem;
+  border: 2px solid rgba(232, 180, 184, 0.22);
+  border-radius: var(--radius-large);
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  margin: 0.75rem;
-  min-width: 240px;
+  margin: 0.25rem 0.75rem;
+  min-width: 200px;
   box-shadow: 
-    0 8px 32px rgba(232, 180, 184, 0.25),
-    inset 0 2px 4px rgba(255, 255, 255, 0.4),
-    inset 0 -2px 4px rgba(232, 180, 184, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
+    0 4px 16px 0 rgba(255, 182, 193, 0.18),
+    0 1px 4px 0 rgba(255, 182, 193, 0.12);
   font-family: 'Inter', 'Georgia', serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   text-transform: none;
-  background: var(--gradient-card);
-  backdrop-filter: blur(15px);
+  background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
+  backdrop-filter: blur(12px);
+  color: var(--text-primary);
   
-  /* Parallelogram Shape */
-  transform: skew(-12deg);
-  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
-  
-  /* Crystal Glass Effect Layers */
+  /* Soft glass effect matching the project */
   background-image: 
-    linear-gradient(135deg, transparent 25%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0.15) 50%, transparent 50%),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%),
-    var(--gradient-card);
-  background-size: 20px 20px, 100% 100%, 100% 100%;
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
+  background-size: 100px 100px, 100% 100%;
 }
 
 .transformation-button::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, 
-    rgba(232, 180, 184, 0.15),
-    rgba(255, 255, 255, 0.2),
-    rgba(240, 197, 201, 0.15),
-    rgba(255, 255, 255, 0.1),
-    rgba(212, 196, 199, 0.15),
-    rgba(232, 180, 184, 0.15));
-  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 182, 193, 0.15) 50%,
+    rgba(255, 255, 255, 0.2) 100%);
+  border-radius: calc(var(--radius-large) + 1px);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.4s ease;
-  animation: crystal-shimmer 6s ease-in-out infinite;
+  animation: soft-shimmer 6s ease-in-out infinite;
 }
 
-@keyframes crystal-shimmer {
+@keyframes soft-shimmer {
   0%, 100% { 
     background-position: -200% center;
     opacity: 0;
   }
   50% { 
     background-position: 200% center;
-    opacity: 0.8;
+    opacity: 0.6;
   }
 }
 
@@ -73,22 +64,18 @@
 }
 
 .transformation-button:hover {
-  transform: skew(-12deg) translateY(-4px) scale(1.03);
+  transform: scale(1.13);
   box-shadow: 
-    0 12px 40px rgba(232, 180, 184, 0.35),
-    inset 0 3px 6px rgba(255, 255, 255, 0.5),
-    inset 0 -3px 6px rgba(232, 180, 184, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.3),
-    0 0 20px rgba(255, 255, 255, 0.4);
-  border-color: rgba(232, 180, 184, 0.4);
-  background: rgba(255, 251, 252, 0.95);
+    0 8px 32px 0 rgba(255, 182, 193, 0.32),
+    0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  border: 2.5px solid #f8bbd0;
+  background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
   
-  /* Enhanced crystal reflection on hover */
+  /* Enhanced soft glow on hover */
   background-image: 
-    linear-gradient(135deg, transparent 20%, rgba(255, 255, 255, 0.3) 25%, rgba(255, 255, 255, 0.3) 55%, transparent 60%),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, transparent 40%, rgba(255, 255, 255, 0.1) 100%),
-    rgba(255, 251, 252, 0.95);
-  background-size: 25px 25px, 100% 100%, 100% 100%;
+    radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.4) 0%, transparent 60%),
+    linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
+  background-size: 120px 120px, 100% 100%;
 }
 
 .transformation-button:hover::before {
@@ -96,11 +83,10 @@
 }
 
 .transformation-button:active {
-  transform: skew(-12deg) translateY(-1px) scale(1.01);
+  transform: scale(1.08);
   box-shadow: 
-    0 6px 24px rgba(232, 180, 184, 0.3),
-    inset 0 2px 4px rgba(255, 255, 255, 0.4),
-    inset 0 -2px 4px rgba(232, 180, 184, 0.1);
+    0 4px 16px 0 rgba(255, 182, 193, 0.25),
+    0 1px 4px 0 rgba(255, 182, 193, 0.15);
 }
 
 .spell-text {
@@ -109,11 +95,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 0.5rem;
   color: var(--text-primary);
-  font-weight: 600;
-  /* Counter-skew the text to keep it readable */
-  transform: skew(12deg);
+  font-weight: 500;
 }
 
 /* Transform Button (Ladybug & Cat Noir theme) */
@@ -129,12 +113,10 @@
 .btn-transform:hover {
   background: linear-gradient(135deg, var(--rose-gold) 0%, var(--soft-pink) 50%, var(--dusty-pink) 100%);
   box-shadow: 
-    0 12px 40px rgba(232, 180, 184, 0.35),
-    inset 0 3px 6px rgba(255, 255, 255, 0.5),
-    inset 0 -3px 6px rgba(232, 180, 184, 0.15),
-    0 0 20px rgba(255, 255, 255, 0.4);
-  transform: skew(-12deg) translateY(-4px) scale(1.03);
-  border-color: rgba(232, 180, 184, 0.5);
+    0 8px 32px 0 rgba(255, 182, 193, 0.32),
+    0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  transform: scale(1.13);
+  border: 2.5px solid #f8bbd0;
 }
 
 /* Detransform Button (More subtle) */
@@ -150,12 +132,10 @@
 .btn-detransform:hover {
   background: linear-gradient(135deg, var(--soft-lavender) 0%, var(--vintage-mauve) 50%, var(--vintage-dusty) 100%);
   box-shadow: 
-    0 12px 40px rgba(212, 196, 199, 0.35),
-    inset 0 3px 6px rgba(255, 255, 255, 0.5),
-    inset 0 -3px 6px rgba(212, 196, 199, 0.15),
-    0 0 20px rgba(255, 255, 255, 0.4);
-  transform: skew(-12deg) translateY(-4px) scale(1.03);
-  border-color: rgba(212, 196, 199, 0.5);
+    0 8px 32px 0 rgba(255, 182, 193, 0.32),
+    0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  transform: scale(1.13);
+  border: 2.5px solid #f8bbd0;
 }
 
 /* Power Up Button (Gold theme) */
@@ -172,12 +152,10 @@
 .btn-power-up:hover {
   background: linear-gradient(135deg, var(--vintage-gold) 0%, var(--warm-cream) 50%, var(--vintage-pearl) 100%);
   box-shadow: 
-    0 12px 40px rgba(212, 175, 143, 0.35),
-    inset 0 3px 6px rgba(255, 255, 255, 0.5),
-    inset 0 -3px 6px rgba(212, 175, 143, 0.15),
-    0 0 20px rgba(255, 255, 255, 0.4);
-  transform: skew(-12deg) translateY(-4px) scale(1.03);
-  border-color: rgba(212, 175, 143, 0.5);
+    0 8px 32px 0 rgba(255, 182, 193, 0.32),
+    0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  transform: scale(1.13);
+  border: 2.5px solid #f8bbd0;
 }
 
 /* Power Off Button */
@@ -193,85 +171,72 @@
 .btn-power-off:hover {
   background: linear-gradient(135deg, var(--vintage-dusty) 0%, var(--vintage-mauve) 50%, var(--vintage-blush) 100%);
   box-shadow: 
-    0 12px 40px rgba(212, 196, 199, 0.35),
-    inset 0 3px 6px rgba(255, 255, 255, 0.5),
-    inset 0 -3px 6px rgba(212, 196, 199, 0.15),
-    0 0 20px rgba(255, 255, 255, 0.4);
-  transform: skew(-12deg) translateY(-4px) scale(1.03);
-  border-color: rgba(212, 196, 199, 0.5);
+    0 8px 32px 0 rgba(255, 182, 193, 0.32),
+    0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  transform: scale(1.13);
+  border: 2.5px solid #f8bbd0;
 }
 
-/* Character-specific button styling with crystal glass effect */
+/* Character-specific button styling with project's soft aesthetic */
 .transformation-button[style*="--button-color"] {
   border-color: var(--button-color);
-  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
-  backdrop-filter: blur(15px);
+  border-radius: var(--radius-large);
+  backdrop-filter: blur(12px);
 }
 
 .transformation-button[style*="--button-color"]:hover {
   box-shadow: 
-    0 12px 40px rgba(255, 255, 255, 0.2),
-    inset 0 3px 6px rgba(255, 255, 255, 0.5),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.1),
-    0 0 20px rgba(255, 255, 255, 0.3);
-  border-color: var(--button-color);
-  transform: skew(-12deg) translateY(-4px) scale(1.03);
+    0 8px 32px 0 rgba(255, 182, 193, 0.32),
+    0 2px 8px 0 rgba(255, 182, 193, 0.22);
+  border: 2.5px solid #f8bbd0;
+  transform: scale(1.13);
 }
 
-/* Character-Specific Button Colors to Match Names - All inherit crystal glass parallelogram effect */
+/* Character-Specific Button Colors - Restored Original Colors with Soft Aesthetic */
 [data-character] .transformation-button {
-  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%) !important;
-  backdrop-filter: blur(15px) !important;
-  background-image: 
-    linear-gradient(135deg, transparent 25%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0.15) 50%, transparent 50%),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%),
-    var(--character-gradient, linear-gradient(135deg, #6b6b6b 0%, #8f8f8f 50%, #6b6b6b 100%)) !important;
-  background-size: 20px 20px, 100% 100%, 100% 100% !important;
+  border-radius: var(--radius-large) !important;
+  backdrop-filter: blur(12px) !important;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.15),
-    inset 0 2px 4px rgba(255, 255, 255, 0.3),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+    0 4px 16px 0 rgba(255, 182, 193, 0.18),
+    0 1px 4px 0 rgba(255, 182, 193, 0.12) !important;
+  background-image: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+    var(--character-gradient, linear-gradient(135deg, #6b6b6b 0%, #8f8f8f 50%, #6b6b6b 100%)) !important;
+  background-size: 100px 100px, 100% 100% !important;
 }
 
 [data-character] .transformation-button:hover {
-  transform: skew(-12deg) translateY(-4px) scale(1.03) !important;
+  transform: scale(1.13) !important;
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.2),
-    inset 0 3px 6px rgba(255, 255, 255, 0.4),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.1),
-    0 0 20px rgba(255, 255, 255, 0.3) !important;
+    0 8px 32px 0 rgba(255, 182, 193, 0.32),
+    0 2px 8px 0 rgba(255, 182, 193, 0.22) !important;
+  border: 2.5px solid #f8bbd0 !important;
 }
 
-/* Cat Noir - Lighter elegant grey theme for better visibility */
+/* Cat Noir - Original grey theme with soft aesthetic */
 [data-character="cat"] .transformation-button {
   background: linear-gradient(135deg, #6b6b6b 0%, #8f8f8f 50%, #6b6b6b 100%) !important;
   color: #ffffff !important;
   border: 2px solid #8f8f8f !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
-  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%) !important;
-  backdrop-filter: blur(15px) !important;
+  border-radius: var(--radius-large) !important;
+  backdrop-filter: blur(12px) !important;
   box-shadow: 
-    0 8px 32px rgba(107, 107, 107, 0.25),
-    inset 0 2px 4px rgba(255, 255, 255, 0.3),
-    inset 0 -2px 4px rgba(107, 107, 107, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+    0 4px 16px 0 rgba(107, 107, 107, 0.18),
+    0 1px 4px 0 rgba(107, 107, 107, 0.12) !important;
   background-image: 
-    linear-gradient(135deg, transparent 25%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0.15) 50%, transparent 50%),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%),
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
     linear-gradient(135deg, #6b6b6b 0%, #8f8f8f 50%, #6b6b6b 100%) !important;
-  background-size: 20px 20px, 100% 100%, 100% 100% !important;
+  background-size: 100px 100px, 100% 100% !important;
 }
 
 [data-character="cat"] .transformation-button:hover {
   background: linear-gradient(135deg, #8f8f8f 0%, #b3b3b3 50%, #8f8f8f 100%) !important;
   border-color: #b3b3b3 !important;
   box-shadow: 
-    0 12px 40px rgba(107, 107, 107, 0.3),
-    inset 0 3px 6px rgba(255, 255, 255, 0.4),
-    inset 0 -3px 6px rgba(107, 107, 107, 0.1),
-    0 0 20px rgba(255, 255, 255, 0.3) !important;
-  transform: skew(-12deg) translateY(-4px) scale(1.03) !important;
+    0 8px 32px 0 rgba(107, 107, 107, 0.32),
+    0 2px 8px 0 rgba(107, 107, 107, 0.22) !important;
+  transform: scale(1.13) !important;
 }
 
 /* Viperion - Soft teal green */
