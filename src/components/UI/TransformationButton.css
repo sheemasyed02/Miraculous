@@ -407,6 +407,108 @@
   box-shadow: 0 8px 25px rgba(142, 68, 173, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.2) !important;
 }
 
+/* Rena Rouge/Fox - Orange theme */
+[data-character="fox"] .transformation-button {
+  background: linear-gradient(135deg, #ff7700 0%, #ff9933 50%, #ff7700 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #ff9933 !important;
+  text-shadow: 0 1px 3px rgba(255, 119, 0, 0.5) !important;
+}
+
+[data-character="fox"] .transformation-button:hover {
+  background: linear-gradient(135deg, #ff9933 0%, #ffaa55 50%, #ff9933 100%) !important;
+  border-color: #ffaa55 !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(255, 119, 0, 0.32),
+    0 2px 8px 0 rgba(255, 119, 0, 0.22) !important;
+  transform: scale(1.13) !important;
+}
+
+/* Carapace/Turtle - Green theme */
+[data-character="turtle"] .transformation-button {
+  background: linear-gradient(135deg, #00cc66 0%, #33dd88 50%, #00cc66 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #33dd88 !important;
+  text-shadow: 0 1px 3px rgba(0, 204, 102, 0.5) !important;
+}
+
+[data-character="turtle"] .transformation-button:hover {
+  background: linear-gradient(135deg, #33dd88 0%, #66eeaa 50%, #33dd88 100%) !important;
+  border-color: #66eeaa !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 204, 102, 0.32),
+    0 2px 8px 0 rgba(0, 204, 102, 0.22) !important;
+  transform: scale(1.13) !important;
+}
+
+/* Ryuko/Dragon - Red theme */
+[data-character="dragon"] .transformation-button {
+  background: linear-gradient(135deg, #cc0000 0%, #ee3333 50%, #cc0000 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #ee3333 !important;
+  text-shadow: 0 1px 3px rgba(204, 0, 0, 0.5) !important;
+}
+
+[data-character="dragon"] .transformation-button:hover {
+  background: linear-gradient(135deg, #ee3333 0%, #ff5555 50%, #ee3333 100%) !important;
+  border-color: #ff5555 !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(204, 0, 0, 0.32),
+    0 2px 8px 0 rgba(204, 0, 0, 0.22) !important;
+  transform: scale(1.13) !important;
+}
+
+/* Pegasus/Horse - Brown theme */
+[data-character="horse"] .transformation-button {
+  background: linear-gradient(135deg, #996633 0%, #bb7744 50%, #996633 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #bb7744 !important;
+  text-shadow: 0 1px 3px rgba(153, 102, 51, 0.5) !important;
+}
+
+[data-character="horse"] .transformation-button:hover {
+  background: linear-gradient(135deg, #bb7744 0%, #dd9966 50%, #bb7744 100%) !important;
+  border-color: #dd9966 !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(153, 102, 51, 0.32),
+    0 2px 8px 0 rgba(153, 102, 51, 0.22) !important;
+  transform: scale(1.13) !important;
+}
+
+/* King Monkey - Orange theme */
+[data-character="monkey"] .transformation-button {
+  background: linear-gradient(135deg, #ff9900 0%, #ffaa33 50%, #ff9900 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #ffaa33 !important;
+  text-shadow: 0 1px 3px rgba(255, 153, 0, 0.5) !important;
+}
+
+[data-character="monkey"] .transformation-button:hover {
+  background: linear-gradient(135deg, #ffaa33 0%, #ffcc66 50%, #ffaa33 100%) !important;
+  border-color: #ffcc66 !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(255, 153, 0, 0.32),
+    0 2px 8px 0 rgba(255, 153, 0, 0.22) !important;
+  transform: scale(1.13) !important;
+}
+
+/* Pigella - Pink theme */
+[data-character="pig"] .transformation-button {
+  background: linear-gradient(135deg, #ff99cc 0%, #ffaadd 50%, #ff99cc 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #ffaadd !important;
+  text-shadow: 0 1px 3px rgba(255, 153, 204, 0.5) !important;
+}
+
+[data-character="pig"] .transformation-button:hover {
+  background: linear-gradient(135deg, #ffaadd 0%, #ffccee 50%, #ffaadd 100%) !important;
+  border-color: #ffccee !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(255, 153, 204, 0.32),
+    0 2px 8px 0 rgba(255, 153, 204, 0.22) !important;
+  transform: scale(1.13) !important;
+}
+
 .action-buttons {
   display: flex;
   flex-direction: column;
