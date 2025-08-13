@@ -234,30 +234,41 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
       <div className="character-info">
         <div className="character-content">
           <div className="character-top-row">
-            <div className="kwami-display">
-              <motion.img 
-                src={character.kwami.image} 
-                alt={character.kwami.name}
-                className="kwami-image"
-                initial={{ scale: 0, rotate: -20 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.2, duration: 0.6, type: "spring" }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling!.textContent = `${character.kwami.name} (Image not found)`;
-                }}
-              />
-              <motion.div 
-                className="kwami-info"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-              >
-                <h4 className="kwami-name">{character.kwami.name}</h4>
-                <p className="kwami-element">{character.kwami.element}</p>
-              </motion.div>
-            </div>
+            <AnimatePresence mode="wait">
+              {transformationState === 'civilian' && (
+                <motion.div 
+                  className="kwami-display"
+                  key="kwami-visible"
+                  initial={{ opacity: 0, scale: 0.8, y: -20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.6, y: -30 }}
+                  transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+                >
+                  <motion.img 
+                    src={character.kwami.image} 
+                    alt={character.kwami.name}
+                    className="kwami-image"
+                    initial={{ scale: 0, rotate: -20 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{ delay: 0.2, duration: 0.6, type: "spring" }}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling!.textContent = `${character.kwami.name} (Image not found)`;
+                    }}
+                  />
+                  <motion.div 
+                    className="kwami-info"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3, duration: 0.4 }}
+                  >
+                    <h4 className="kwami-name">{character.kwami.name}</h4>
+                    <p className="kwami-element">{character.kwami.element}</p>
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           <div className="character-image-and-name-container">
