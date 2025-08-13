@@ -204,7 +204,7 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
 
   return (
     <motion.div
-      className="character-display"
+      className={`character-display ${isTransforming ? 'transforming' : ''}`}
       data-character={character.id}
       initial={{ opacity: 0, x: 300 }}
       animate={{ opacity: 1, x: 0 }}
@@ -320,14 +320,13 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
       >
-        {isTransforming ? (
+        {getActionButtons()}
+        {isTransforming && (
           <div className="modern-transformation-overlay">
             <div className="spell-text-display">
               {transformationText}
             </div>
           </div>
-        ) : (
-          getActionButtons()
         )}
       </motion.div>
     </motion.div>

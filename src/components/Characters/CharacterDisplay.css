@@ -594,17 +594,39 @@
   position: relative;
   z-index: 2;
   margin-left: -2rem;
+  min-height: 120px; /* Ensure consistent height with space for overlay */
+}
+
+/* Keep transformation buttons in their normal position during transformation */
+.action-section .transformation-button {
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure action buttons maintain their layout during transformation */
+.action-section .action-buttons {
+  position: relative;
+  z-index: 10;
+}
+
+/* Style buttons during transformation to show they're temporarily disabled */
+.character-display.transforming .transformation-button {
+  opacity: 0.6;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
 }
 
 /* Modern Miraculous Transformation - Soft & Beautiful */
 /* Modern Transformation Overlay - Clean and Elegant */
 .modern-transformation-overlay {
   position: absolute;
-  bottom: 20px;
+  bottom: -80px; /* Position well below the button area */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 5; /* Lower z-index than buttons */
   pointer-events: none;
+  width: max-content;
 }
 
 .spell-text-display {
