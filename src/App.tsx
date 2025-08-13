@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MiraculousBoxCanonical from './components/MiraculousBox/MiraculousBoxCanonical';
+import CursorEffect from './components/UI/CursorEffect';
 import { useCharacterState } from './hooks/useCharacterState';
 import { soundManager } from './utils/soundManager';
 import './App.css';
@@ -27,6 +28,9 @@ function App() {
 
   return (
     <div className="app">
+      {/* Magical Cursor Effect */}
+      <CursorEffect />
+      
       <header className="app-header">
         <img src={miraculousIcon} alt="Miraculous Box" className="app-logo" />
       </header>
