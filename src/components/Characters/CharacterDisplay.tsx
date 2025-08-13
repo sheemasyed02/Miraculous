@@ -198,28 +198,6 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
     }
   };
 
-  // Determine animation styles based on character type
-  const getTransformationAnimation = () => {
-    // Specific character animation styles
-    switch (character.id) {
-      case 'ladybug':
-        return {
-          background: `radial-gradient(circle, rgba(247, 5, 45, 0.4) 0%, rgba(0, 0, 0, 0.8) 70%)`,
-          boxShadow: `0 0 50px var(--ladybug-red)`
-        };
-      case 'cat':
-        return {
-          background: `radial-gradient(circle, rgba(60, 211, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 70%)`,
-          boxShadow: `0 0 50px var(--catnoir-green)`
-        };
-      default:
-        return {
-          background: `radial-gradient(circle, ${character.kwami.color || 'rgba(255, 204, 0, 0.4)'} 0%, rgba(0, 0, 0, 0.8) 70%)`,
-          boxShadow: `0 0 50px ${character.kwami.color || 'var(--kwami-gold)'}`
-        };
-    }
-  };
-
   const transformationText = isTransforming ? 
     (transformationState === 'civilian' ? character.transformationSpell : character.detransformationSpell) : 
     '';
@@ -286,7 +264,7 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={`${character.id}-${transformationState}`}
-                className="character-image-container"
+                className={`character-image-container ${isTransforming ? 'transforming' : ''}`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
@@ -343,13 +321,9 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         {isTransforming ? (
-          <div className="transforming-animation" style={getTransformationAnimation()}>
-            <div className="transforming-animation-inner">
-              <div className="transforming-animation-circle">
-                <div className="transforming-animation-center">
-                  {transformationText}
-                </div>
-              </div>
+          <div className="modern-transformation-overlay">
+            <div className="spell-text-display">
+              {transformationText}
             </div>
           </div>
         ) : (
