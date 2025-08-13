@@ -106,15 +106,39 @@ const MiraculousBoxCanonical: React.FC<MiraculousBoxCanonicalProps> = ({
             className="miraculous-jewel center center-ladybug"
             style={{ left: '50%', top: '50%', transform: 'translate(-110%, -50%)' }}
             onClick={() => handleMiraculousClick('ladybug')}
+            data-character="ladybug"
           >
             <img src={getMiraculousImage('ladybug')} alt="Ladybug Miraculous" />
+            <div className="miraculous-tooltip">
+              {(() => {
+                const character = characters.find(char => char.id === 'ladybug');
+                return character ? (
+                  <div className="tooltip-content">
+                    <div className="kwami-name">{character.kwami.name}</div>
+                    <div className="kwami-power">{character.kwami.element}</div>
+                  </div>
+                ) : null;
+              })()}
+            </div>
           </div>
           <div
             className="miraculous-jewel center center-catnoir"
             style={{ left: '50%', top: '50%', transform: 'translate(10%, -50%)' }}
             onClick={() => handleMiraculousClick('cat')}
+            data-character="cat"
           >
             <img src={getMiraculousImage('cat')} alt="Cat Noir Miraculous" />
+            <div className="miraculous-tooltip">
+              {(() => {
+                const character = characters.find(char => char.id === 'cat');
+                return character ? (
+                  <div className="tooltip-content">
+                    <div className="kwami-name">{character.kwami.name}</div>
+                    <div className="kwami-power">{character.kwami.element}</div>
+                  </div>
+                ) : null;
+              })()}
+            </div>
           </div>
         </div>
         {/* Place the other 17 miraculous evenly around the circle */}
@@ -132,8 +156,20 @@ const MiraculousBoxCanonical: React.FC<MiraculousBoxCanonicalProps> = ({
                 transform: `translate(-50%, -50%) rotate(${angle}deg) translate(180px) rotate(-${angle}deg)`
               }}
               onClick={() => handleMiraculousClick(miraculousId)}
+              data-character={miraculousId}
             >
               <img src={getMiraculousImage(miraculousId)} alt={`${miraculousId.charAt(0).toUpperCase() + miraculousId.slice(1)} Miraculous`} />
+              <div className="miraculous-tooltip">
+                {(() => {
+                  const character = characters.find(char => char.id === miraculousId);
+                  return character ? (
+                    <div className="tooltip-content">
+                      <div className="kwami-name">{character.kwami.name}</div>
+                      <div className="kwami-power">{character.kwami.element}</div>
+                    </div>
+                  ) : null;
+                })()}
+              </div>
             </div>
           );
         })}
