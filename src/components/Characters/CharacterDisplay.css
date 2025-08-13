@@ -195,6 +195,7 @@
   gap: -2rem;
   margin-bottom: 0;
   position: relative;
+  width: 100%;
 }
 
 .character-image-container {
@@ -202,7 +203,8 @@
   width: 520px;
   height: 520px;
   margin-bottom: 0;
-  margin-right: -3rem;
+  margin-right: 0; /* Center the image */
+  margin-left: 0;  /* Center the image */
   z-index: 1;
 }
 
@@ -541,7 +543,7 @@
   transform: rotate(180deg);
   font-size: 1.8rem !important;
   font-weight: 400 !important;
-  margin: 0 0 0 -4rem !important;
+  margin: 0 0 0 1rem !important; /* Adjust margin for centered image */
   height: 420px;
   display: flex;
   align-items: center;
@@ -552,6 +554,7 @@
   color: var(--accent-color, #8b5a7a) !important;
   text-shadow: 0 2px 8px rgba(139, 90, 122, 0.3) !important;
   transition: color 0.3s ease, text-shadow 0.3s ease !important;
+  position: relative;
 }
 
 .transformation-phrase {
@@ -593,7 +596,7 @@
   margin-top: -1.5rem;
   position: relative;
   z-index: 2;
-  margin-left: -2rem;
+  margin-left: 0; /* Center align with the centered image */
   min-height: 120px; /* Ensure consistent height with space for overlay */
 }
 
