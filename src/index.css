@@ -1,5 +1,5 @@
-/* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&family=Quicksand:wght@400;500;600;700&display=swap');
+/* Font imports - Vintage Modern Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* Miraculous theme colors and styles */
 :root {
@@ -31,10 +31,13 @@
   --animation-medium: 0.6s;
   --animation-slow: 1s;
   
-  /* Font Families */
-  --font-primary: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-secondary: 'Raleway', 'Arial', sans-serif;
-  --font-accent: 'Quicksand', 'Arial', sans-serif;
+  /* Font Families - Vintage Modern Aesthetic */
+  --font-primary: 'Lora', 'Georgia', serif; /* Elegant serif for main text - warm & readable */
+  --font-secondary: 'Source Sans Pro', 'Helvetica Neue', sans-serif; /* Clean sans-serif for UI */
+  --font-accent: 'Playfair Display', 'Times New Roman', serif; /* Distinctive display font for titles */
+  --font-elegant: 'Cormorant Garamond', 'Garamond', serif; /* Sophisticated serif for special text */
+  --font-vintage: 'Crimson Text', 'Times', serif; /* Classic serif with vintage feel */
+  --font-modern: 'Montserrat', 'Arial', sans-serif; /* Modern sans-serif for contrast */
 }
 
 /* Global styling */
@@ -57,6 +60,9 @@ body {
   background: var(--bg-pink);
   color: var(--text-primary);
   overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
 }
 
 html {
@@ -237,10 +243,12 @@ button:focus-visible,
 
 .click-instruction {
   color: var(--text-accent);
-  font-family: var(--font-accent);
-  font-size: 1.2rem;
+  font-family: var(--font-vintage);
+  font-size: 1.3rem;
+  font-style: italic;
   text-align: center;
   animation: miraculous-pulse 2s infinite;
+  letter-spacing: 0.5px;
 }
 
 .box-only-view {
@@ -256,8 +264,8 @@ button:focus-visible,
 .choose-title {
   color: var(--text-primary);
   font-family: var(--font-accent);
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 800;
   margin-bottom: 2rem;
   text-align: center;
   background: linear-gradient(45deg, var(--ladybug-red), var(--miraculous-purple));
@@ -265,6 +273,8 @@ button:focus-visible,
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .interactive-box-container {
@@ -322,13 +332,14 @@ button:focus-visible,
   color: var(--text-primary);
   border: none;
   border-radius: 50px;
-  font-family: var(--font-accent);
+  font-family: var(--font-secondary);
   font-size: 1rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .back-button:hover {
@@ -403,7 +414,7 @@ button:focus-visible,
 
 .character-name {
   font-family: var(--font-accent);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
@@ -412,6 +423,8 @@ button:focus-visible,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .kwami-owner-display {
@@ -451,11 +464,13 @@ button:focus-visible,
 }
 
 .kwami-name, .owner-name {
-  font-family: var(--font-secondary);
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-elegant);
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--text-primary);
   text-align: center;
+  letter-spacing: 0.3px;
+  font-style: italic;
 }
 
 /* TransformationButton Styling */
@@ -471,11 +486,13 @@ button:focus-visible,
   border: 1px solid rgba(255, 204, 0, 0.3);
   color: var(--text-primary);
   font-weight: 600;
-  font-family: var(--font-accent);
+  font-family: var(--font-modern);
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(255, 204, 0, 0.2);
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .transformation-button::before {
@@ -513,6 +530,9 @@ button:focus-visible,
 
 .spell-text {
   font-weight: 600;
+  font-family: var(--font-vintage);
+  font-style: italic;
+  letter-spacing: 0.3px;
 }
 
 .btn-transform {

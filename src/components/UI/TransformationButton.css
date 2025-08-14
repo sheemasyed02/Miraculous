@@ -16,9 +16,9 @@
   box-shadow: 
     0 4px 16px 0 rgba(255, 182, 193, 0.18),
     0 1px 4px 0 rgba(255, 182, 193, 0.12);
-  font-family: 'Inter', 'Georgia', serif;
-  letter-spacing: 0.3px;
-  text-transform: none;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
   background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
   backdrop-filter: blur(12px);
   color: var(--text-primary);
@@ -98,6 +98,10 @@
   gap: 0.5rem;
   color: #ffffff;
   font-weight: 500;
+  font-family: 'Crimson Text', 'Times', serif;
+  font-style: italic;
+  letter-spacing: 0.4px;
+  text-transform: none;
 }
 
 /* Transform Button (Ladybug & Cat Noir theme) */
