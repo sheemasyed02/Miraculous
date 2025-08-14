@@ -187,6 +187,10 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
         case 'superhero':
           return superhero.name;
         case 'power-up':
+          // Special case for butterfly - show Shadow Moth instead of Hawk Moth (Powered Up!)
+          if (character.id === 'butterfly') {
+            return 'Shadow Moth';
+          }
           return `${superhero.name} (Powered Up!)`;
         default:
           return civilian.name;

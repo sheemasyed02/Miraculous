@@ -155,12 +155,13 @@ export const CHARACTERS_DATA: Character[] = [
       image: '/src/assets/images/ShadowMoth/Gabriel.png'
     },
     superhero: {
-      name: 'Shadow Moth',
-      image: '/src/assets/images/ShadowMoth/ShadowMoth.png'
+      name: 'Hawk Moth',
+      image: '/src/assets/images/ShadowMoth/HawkMoth.png',
+      powerUpImage: '/src/assets/images/ShadowMoth/ShadowMoth.png'
     },
     transformationSpell: 'Nooroo, dark wings rise!',
     detransformationSpell: 'Nooroo, dark wings fall!',
-    canPowerUp: false,
+    canPowerUp: true,
     state: 'civilian'
   },
   {
