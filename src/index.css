@@ -1,5 +1,5 @@
-/* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&family=Quicksand:wght@400;500;600;700&display=swap');
+/* Aesthetic Vintage-Modern Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
 
 /* Miraculous theme colors and styles */
 :root {
@@ -31,10 +31,12 @@
   --animation-medium: 0.6s;
   --animation-slow: 1s;
   
-  /* Font Families */
-  --font-primary: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-secondary: 'Raleway', 'Arial', sans-serif;
-  --font-accent: 'Quicksand', 'Arial', sans-serif;
+  /* Font Families - Vintage Modern Aesthetic */
+  --font-primary: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-secondary: 'Crimson Pro', 'Baskerville', 'Times', serif;
+  --font-accent: 'Cormorant Garamond', 'Garamond', 'Times New Roman', serif;
+  --font-elegant: 'Spectral', 'Georgia', serif;
+  --font-classic: 'Libre Baskerville', 'Baskerville', serif;
 }
 
 /* Global styling */
@@ -237,10 +239,12 @@ button:focus-visible,
 
 .click-instruction {
   color: var(--text-accent);
-  font-family: var(--font-accent);
+  font-family: var(--font-elegant);
   font-size: 1.2rem;
   text-align: center;
   animation: miraculous-pulse 2s infinite;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 .box-only-view {
@@ -255,9 +259,9 @@ button:focus-visible,
 
 .choose-title {
   color: var(--text-primary);
-  font-family: var(--font-accent);
+  font-family: var(--font-primary);
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
   background: linear-gradient(45deg, var(--ladybug-red), var(--miraculous-purple));
@@ -265,6 +269,8 @@ button:focus-visible,
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  font-style: italic;
+  letter-spacing: 0.8px;
 }
 
 .interactive-box-container {
@@ -322,13 +328,15 @@ button:focus-visible,
   color: var(--text-primary);
   border: none;
   border-radius: 50px;
-  font-family: var(--font-accent);
+  font-family: var(--font-secondary);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 .back-button:hover {
@@ -402,9 +410,9 @@ button:focus-visible,
 }
 
 .character-name {
-  font-family: var(--font-accent);
+  font-family: var(--font-primary);
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
   text-align: center;
   margin: 0.5rem 0;
@@ -412,6 +420,8 @@ button:focus-visible,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-style: italic;
+  letter-spacing: 0.8px;
 }
 
 .kwami-owner-display {
@@ -453,9 +463,11 @@ button:focus-visible,
 .kwami-name, .owner-name {
   font-family: var(--font-secondary);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
   text-align: center;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 /* TransformationButton Styling */
@@ -470,7 +482,10 @@ button:focus-visible,
   background: linear-gradient(135deg, rgba(255, 204, 0, 0.6), rgba(255, 204, 0, 0.2));
   border: 1px solid rgba(255, 204, 0, 0.3);
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 500;
+  font-family: var(--font-classic);
+  font-style: italic;
+  letter-spacing: 0.5px;
   font-family: var(--font-accent);
   position: relative;
   overflow: hidden;
@@ -512,7 +527,10 @@ button:focus-visible,
 }
 
 .spell-text {
-  font-weight: 600;
+  font-weight: 500;
+  font-family: var(--font-classic);
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 .btn-transform {

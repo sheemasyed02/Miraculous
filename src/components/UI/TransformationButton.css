@@ -16,8 +16,8 @@
   box-shadow: 
     0 4px 16px 0 rgba(255, 182, 193, 0.18),
     0 1px 4px 0 rgba(255, 182, 193, 0.12);
-  font-family: 'Inter', 'Georgia', serif;
-  letter-spacing: 0.3px;
+  font-family: var(--font-classic);
+  letter-spacing: 0.5px;
   text-transform: none;
   background: linear-gradient(135deg, #fff0f6 0%, #f8bbd0 100%);
   backdrop-filter: blur(12px);
