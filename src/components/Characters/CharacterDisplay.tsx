@@ -99,28 +99,98 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
   }
 
   const getCurrentImage = () => {
-    switch (transformationState) {
-      case 'civilian':
-        return character.civilian.image;
-      case 'superhero':
-        return character.superhero.image;
-      case 'power-up':
-        return character.superhero.powerUpImage || character.superhero.image;
-      default:
-        return character.civilian.image;
+    if (!character) return '';
+    
+    if (character.isDualHolder) {
+      // Handle dual holders
+      const civilian = character.civilian as any;
+      const superhero = character.superhero as any;
+      
+      switch (transformationState) {
+        case 'civilian':
+          return {
+            left: civilian.oldHolder.image,
+            right: civilian.newHolder.image
+          };
+        case 'superhero':
+          return {
+            left: superhero.oldSuperhero.image,
+            right: superhero.newSuperhero.image
+          };
+        case 'power-up':
+          return {
+            left: superhero.oldSuperhero.powerUpImage || superhero.oldSuperhero.image,
+            right: superhero.newSuperhero.powerUpImage || superhero.newSuperhero.image
+          };
+        default:
+          return {
+            left: civilian.oldHolder.image,
+            right: civilian.newHolder.image
+          };
+      }
+    } else {
+      // Handle single holders
+      const civilian = character.civilian as any;
+      const superhero = character.superhero as any;
+      
+      switch (transformationState) {
+        case 'civilian':
+          return civilian.image;
+        case 'superhero':
+          return superhero.image;
+        case 'power-up':
+          return superhero.powerUpImage || superhero.image;
+        default:
+          return civilian.image;
+      }
     }
   };
 
   const getCurrentName = () => {
-    switch (transformationState) {
-      case 'civilian':
-        return character.civilian.name;
-      case 'superhero':
-        return character.superhero.name;
-      case 'power-up':
-        return `${character.superhero.name} (Powered Up!)`;
-      default:
-        return character.civilian.name;
+    if (!character) return '';
+    
+    if (character.isDualHolder) {
+      // Handle dual holders
+      const civilian = character.civilian as any;
+      const superhero = character.superhero as any;
+      
+      switch (transformationState) {
+        case 'civilian':
+          return {
+            left: civilian.oldHolder.name,
+            right: civilian.newHolder.name
+          };
+        case 'superhero':
+          return {
+            left: superhero.oldSuperhero.name,
+            right: superhero.newSuperhero.name
+          };
+        case 'power-up':
+          return {
+            left: `${superhero.oldSuperhero.name} (Powered Up!)`,
+            right: `${superhero.newSuperhero.name} (Powered Up!)`
+          };
+        default:
+          return {
+            left: civilian.oldHolder.name,
+            right: civilian.newHolder.name
+          };
+      }
+    } else {
+      // Handle single holders
+      const civilian = character.civilian as any;
+      const superhero = character.superhero as any;
+      
+      switch (transformationState) {
+        case 'civilian':
+          return civilian.name;
+        case 'superhero':
+          return superhero.name;
+        case 'power-up':
+          return `${superhero.name} (Powered Up!)`;
+        default:
+          return civilian.name;
+      }
     }
   };
   
@@ -248,29 +318,91 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={`${character.id}-${transformationState}`}
-                className={`character-image-container ${isTransforming ? 'transforming' : ''}`}
+                className={`character-image-container ${isTransforming ? 'transforming' : ''} ${character.isDualHolder ? 'dual-holder' : ''}`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
               >
-                <img
-                  ref={imageRef}
-                  src={getCurrentImage()}
-                  alt={getCurrentName()}
-                  className="character-image"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `data:image/svg+xml;base64,${btoa(`
-                      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="200" height="200" fill="${character.kwami.color || '#953ca0'}" opacity="0.3" rx="20"/>
-                        <text x="100" y="100" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
-                          ${getCurrentName()}
-                        </text>
-                      </svg>
-                    `)}`;
-                  }}
-                />
+                {character.isDualHolder ? (
+                  // Render dual holders side by side with names below each image
+                  <div className="dual-holders-container">
+                    <div className="holder-left">
+                      <img
+                        ref={imageRef}
+                        src={(getCurrentImage() as any).left}
+                        alt={(getCurrentName() as any).left}
+                        className="character-image"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = `data:image/svg+xml;base64,${btoa(`
+                            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="200" height="200" fill="${character.kwami.color || '#953ca0'}" opacity="0.3" rx="20"/>
+                              <text x="100" y="100" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
+                                ${(getCurrentName() as any).left}
+                              </text>
+                            </svg>
+                          `)}`;
+                        }}
+                      />
+                      <motion.h2
+                        className="character-name character-name-dual-left"
+                        key={`${(getCurrentName() as any).left}-left`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
+                      >
+                        {(getCurrentName() as any).left}
+                      </motion.h2>
+                    </div>
+                    <div className="holder-right">
+                      <img
+                        src={(getCurrentImage() as any).right}
+                        alt={(getCurrentName() as any).right}
+                        className="character-image"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = `data:image/svg+xml;base64,${btoa(`
+                            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="200" height="200" fill="${character.kwami.color || '#953ca0'}" opacity="0.3" rx="20"/>
+                              <text x="100" y="100" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
+                                ${(getCurrentName() as any).right}
+                              </text>
+                            </svg>
+                          `)}`;
+                        }}
+                      />
+                      <motion.h2
+                        className="character-name character-name-dual-right"
+                        key={`${(getCurrentName() as any).right}-right`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
+                      >
+                        {(getCurrentName() as any).right}
+                      </motion.h2>
+                    </div>
+                  </div>
+                ) : (
+                  // Render single holder
+                  <img
+                    ref={imageRef}
+                    src={getCurrentImage() as string}
+                    alt={getCurrentName() as string}
+                    className="character-image"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = `data:image/svg+xml;base64,${btoa(`
+                        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="200" height="200" fill="${character.kwami.color || '#953ca0'}" opacity="0.3" rx="20"/>
+                          <text x="100" y="100" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
+                            ${getCurrentName() as string}
+                          </text>
+                        </svg>
+                      `)}`;
+                    }}
+                  />
+                )}
                 
                 {/* Sparkles overlay for transformation */}
                 {isTransforming && sparkles.map(sparkle => (
@@ -294,15 +426,18 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
               </motion.div>
             </AnimatePresence>
 
-            <motion.h2
-              className="character-name character-name-vertical"
-              key={getCurrentName()}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-            >
-              {getCurrentName()}
-            </motion.h2>
+            {!character.isDualHolder && (
+              // Render single holder name (dual holder names are now within their containers)
+              <motion.h2
+                className="character-name character-name-vertical"
+                key={getCurrentName() as string}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+              >
+                {getCurrentName() as string}
+              </motion.h2>
+            )}
           </div>
 
           <motion.div

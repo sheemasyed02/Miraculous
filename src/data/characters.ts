@@ -81,17 +81,30 @@ export const CHARACTERS_DATA: Character[] = [
       color: '#00cc66'
     },
     civilian: {
-      name: 'Nino Lahiffe',
-      image: '/src/assets/images/Carapace/Nino.png'
+      oldHolder: {
+        name: 'Master Fu',
+        image: '/src/assets/images/Carapace/Master_Wang_Fu.png'
+      },
+      newHolder: {
+        name: 'Nino Lahiffe',
+        image: '/src/assets/images/Carapace/Nino.png'
+      }
     },
     superhero: {
-      name: 'Carapace',
-      image: '/src/assets/images/Carapace/Carapace.png'
+      oldSuperhero: {
+        name: 'Master Fu',
+        image: '/src/assets/images/Carapace/Master_Fu.png'
+      },
+      newSuperhero: {
+        name: 'Carapace',
+        image: '/src/assets/images/Carapace/Carapace.png'
+      }
     },
     transformationSpell: 'Wayzz, shell on!',
     detransformationSpell: 'Wayzz, shell off!',
     canPowerUp: false,
-    state: 'civilian'
+    state: 'civilian',
+    isDualHolder: true
   },
   {
     id: 'bee',
@@ -103,17 +116,30 @@ export const CHARACTERS_DATA: Character[] = [
       color: '#ffee00'
     },
     civilian: {
-      name: 'Chloé Bourgeois',
-      image: '/src/assets/images/Vesperia/Chloe.png'
+      oldHolder: {
+        name: 'Chloé Bourgeois',
+        image: '/src/assets/images/Vesperia/Chloe.png'
+      },
+      newHolder: {
+        name: 'Zoé Lee',
+        image: '/src/assets/images/Vesperia/Zoe.png'
+      }
     },
     superhero: {
-      name: 'Queen Bee / Vesperia',
-      image: '/src/assets/images/Vesperia/Vesperia.png'
+      oldSuperhero: {
+        name: 'Queen Bee',
+        image: '/src/assets/images/Vesperia/QueenBee.png'
+      },
+      newSuperhero: {
+        name: 'Vesperia',
+        image: '/src/assets/images/Vesperia/Vesperia.png'
+      }
     },
     transformationSpell: 'Pollen, buzz on!',
     detransformationSpell: 'Pollen, buzz off!',
     canPowerUp: false,
-    state: 'civilian'
+    state: 'civilian',
+    isDualHolder: true
   },
   {
     id: 'butterfly',
@@ -147,17 +173,30 @@ export const CHARACTERS_DATA: Character[] = [
       color: '#6633cc'
     },
     civilian: {
-      name: 'Nathalie Sancoeur',
-      image: '/src/assets/images/Mayura/Nathalie.png'
+      oldHolder: {
+        name: 'Nathalie Sancoeur',
+        image: '/src/assets/images/Mayura/Nathalie.png'
+      },
+      newHolder: {
+        name: 'Félix Fathom',
+        image: '/src/assets/images/Mayura/Félix.png'
+      }
     },
     superhero: {
-      name: 'Mayura',
-      image: '/src/assets/images/Mayura/Mayura.png'
+      oldSuperhero: {
+        name: 'Mayura',
+        image: '/src/assets/images/Mayura/Mayura.png'
+      },
+      newSuperhero: {
+        name: 'Argos',
+        image: '/src/assets/images/Mayura/Argos.png'
+      }
     },
     transformationSpell: 'Duusu, spread my feathers!',
     detransformationSpell: 'Duusu, fold my feathers!',
     canPowerUp: false,
-    state: 'civilian'
+    state: 'civilian',
+    isDualHolder: true
   },
   {
     id: 'mouse',

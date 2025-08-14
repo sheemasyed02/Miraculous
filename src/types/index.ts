@@ -14,16 +14,39 @@ export interface Character {
   civilian: {
     name: string;
     image: string;
+  } | {
+    // Dual holders: old holder (left) and new holder (right)
+    oldHolder: {
+      name: string;
+      image: string;
+    };
+    newHolder: {
+      name: string;
+      image: string;
+    };
   };
   superhero: {
     name: string;
     image: string;
     powerUpImage?: string;
+  } | {
+    // Dual superheroes: old superhero (left) and new superhero (right)
+    oldSuperhero: {
+      name: string;
+      image: string;
+      powerUpImage?: string;
+    };
+    newSuperhero: {
+      name: string;
+      image: string;
+      powerUpImage?: string;
+    };
   };
   transformationSpell: string;
   detransformationSpell: string;
   canPowerUp: boolean;
   state: CharacterState;
+  isDualHolder?: boolean; // Flag to identify dual holder characters
 }
 
 export interface SoundConfig {
