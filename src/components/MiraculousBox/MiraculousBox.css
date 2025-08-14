@@ -771,6 +771,17 @@
     align-items: center;
     gap: 1rem;
   }
+
+  .close-box-button {
+    max-width: 250px;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .close-box-button.centered-button {
+    width: 250px;
+    margin: 1.2rem auto 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -816,6 +827,17 @@
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
+
+  .close-box-button {
+    max-width: 200px;
+    padding: 0.6rem 1.3rem;
+    font-size: 0.9rem;
+  }
+
+  .close-box-button.centered-button {
+    width: 200px;
+    margin: 1rem auto 0;
+  }
 }
 
 /* Box controls section for back and close buttons */
@@ -838,13 +860,13 @@
 /* Close box button */
 .close-box-button {
   width: 100%;
-  max-width: 350px;
-  padding: 1rem 2rem;
+  max-width: 300px;
+  padding: 0.75rem 1.8rem;
   background: rgba(255, 105, 97, 0.15);
   border: 2px solid rgba(255, 105, 97, 0.3);
   border-radius: 50px;
   color: var(--text-light);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -881,8 +903,8 @@
 }
 
 .close-box-button.centered-button {
-  margin: 2rem auto 0;
-  width: 350px;
+  margin: 1.5rem auto 0;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
