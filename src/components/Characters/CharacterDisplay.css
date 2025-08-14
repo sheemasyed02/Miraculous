@@ -660,11 +660,11 @@
   text-shadow: 0 1px 4px rgba(74, 155, 142, 0.3) !important;
 }
 
-/* Ladybug - Bright red/pink theme */
+/* Ladybug - Bright red/pink theme matching Tikki */
 [data-character="ladybug"] .character-name,
 [data-character="ladybug"] .character-name-vertical {
-  color: #c51a1aff !important;
-  text-shadow: 0 2px 8px rgba(231, 76, 60, 0.4) !important;
+  color: #cf4369ff !important;
+  text-shadow: 0 2px 8px rgba(255, 107, 157, 0.4) !important;
 }
 
 [data-character="ladybug"] .kwami-name {
