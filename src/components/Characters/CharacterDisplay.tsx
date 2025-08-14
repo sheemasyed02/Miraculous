@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Character } from '../../types';
 import TransformationButton from '../UI/TransformationButton';
@@ -7,6 +7,15 @@ import './CharacterDisplay.css';
 
 interface CharacterDisplayProps {
   character: Character | null;
+}
+
+interface Sparkle {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  opacity: number;
+  duration: number;
 }
 
 const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
@@ -20,6 +29,50 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
   } = useTransformation(character);
   
   const containerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const [sparkles, setSparkles] = useState<Sparkle[]>([]);
+
+  // Generate sparkles during transformation
+  useEffect(() => {
+    if (isTransforming && imageRef.current) {
+      const interval = setInterval(() => {
+        const imageRect = imageRef.current?.getBoundingClientRect();
+        if (!imageRect) return;
+
+        // Create sparkles focused on head and body area (upper 70% of image)
+        const newSparkles: Sparkle[] = [];
+        for (let i = 0; i < 8; i++) {
+          const sparkle: Sparkle = {
+            id: Date.now() + Math.random(),
+            // Focus sparkles on head and body area (avoid legs/bottom 30%)
+            x: Math.random() * imageRect.width * 0.8 + imageRect.width * 0.1, // Center 80% width
+            y: Math.random() * imageRect.height * 0.7 + imageRect.height * 0.1, // Upper 70% height (head + body)
+            size: Math.random() * 6 + 3,
+            opacity: Math.random() * 0.8 + 0.4,
+            duration: Math.random() * 1500 + 1000
+          };
+          newSparkles.push(sparkle);
+        }
+        
+        setSparkles(prev => [...prev, ...newSparkles]);
+      }, 200); 
+
+      // Clean up sparkles after they expire
+      const cleanupInterval = setInterval(() => {
+        setSparkles(prev => prev.filter(sparkle => 
+          Date.now() - sparkle.id < sparkle.duration
+        ));
+      }, 100);
+
+      return () => {
+        clearInterval(interval);
+        clearInterval(cleanupInterval);
+      };
+    } else {
+      // Clear sparkles when not transforming
+      setSparkles([]);
+    }
+  }, [isTransforming]);
 
   if (!character) {
     return (
@@ -202,6 +255,7 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
                 transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
               >
                 <img
+                  ref={imageRef}
                   src={getCurrentImage()}
                   alt={getCurrentName()}
                   className="character-image"
@@ -217,6 +271,22 @@ const CharacterDisplay: React.FC<CharacterDisplayProps> = ({ character }) => {
                     `)}`;
                   }}
                 />
+                
+                {/* Sparkles overlay for transformation */}
+                {isTransforming && sparkles.map(sparkle => (
+                  <div
+                    key={sparkle.id}
+                    className="transformation-sparkle"
+                    style={{
+                      left: sparkle.x,
+                      top: sparkle.y,
+                      width: sparkle.size,
+                      height: sparkle.size,
+                      opacity: sparkle.opacity,
+                      animationDuration: `${sparkle.duration}ms`
+                    }}
+                  />
+                ))}
                 
                 {transformationState === 'power-up' && (
                   <div className="power-up-aura" style={{ backgroundColor: character.kwami.color || '#ffcc00' }} />
