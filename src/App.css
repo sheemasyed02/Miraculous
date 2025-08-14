@@ -51,7 +51,7 @@
   overflow-x: hidden;
   background: var(--gradient-primary);
   position: relative;
-  font-family: 'Inter', 'Georgia', serif;
+  font-family: var(--font-primary);
   color: var(--text-primary);
   line-height: 1.7;
   margin: 0;

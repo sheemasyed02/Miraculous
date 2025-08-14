@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: var(--font-primary);
   overflow-x: hidden;
 }
 
@@ -73,9 +73,10 @@
   color: #8B4513;
   font-size: 2.8rem;
   margin-bottom: 3rem;
-  font-weight: 700;
-  font-family: 'Georgia', serif;
+  font-weight: 500;
+  font-family: var(--font-primary);
   text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
+  font-style: italic;
 }
 
 /* Character View Layout */
@@ -691,12 +692,13 @@
   border: 3px solid #3E2723;
   border-radius: 15px;
   font-size: 1.1rem;
-  font-weight: 600;
-  font-family: 'Georgia', serif;
+  font-weight: 500;
+  font-family: var(--font-classic);
   cursor: pointer;
   transition: all 0.4s ease;
   box-shadow: 
     0 6px 20px rgba(139, 69, 19, 0.3),
+  font-style: italic;
     inset 0 2px 5px rgba(245, 245, 220, 0.2);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
