@@ -1,110 +1,98 @@
-╔══════════════════════════════════════════════════════════╗
-           M  I  R  A  C  U  L  O  U  S
-      Tales of Ladybug & Cat Noir Showcase
-╚══════════════════════════════════════════════════════════╝
+# ✧ Miraculous: Tales of Ladybug & Cat Noir Showcase
 
-⟡  An immersive web experience exploring the Miraculous,  
-   their chosen holders, and their transformative powers.  ⟡
+> **An immersive web experience exploring the Miraculous, their chosen holders, and their transformative powers.**
 
+---
 
-──────────────────────────────
-▣ OVERVIEW
-──────────────────────────────
-This project is a **React + TypeScript + Vite** web experience that visualizes  
-the *Miraculous universe* — displaying the mystical jewels, their holders,  
-and cinematic transformation sequences through an interactive, aesthetic interface.
+## ❖ Overview
+A modern **React + TypeScript + Vite** project that visualizes the *Miraculous universe* — showcasing mystical jewels, their holders, and cinematic transformations through an elegant, interactive interface.  
 
-It blends the magic of storytelling with modern web technology,  
-crafted to evoke elegance, secrecy, and heroism — much like the series itself.
+This web experience fuses **visual storytelling**, **animation precision**, and **UI minimalism** to evoke the mystery and heroism that define *Tales of Ladybug & Cat Noir*.
 
+---
 
-──────────────────────────────
-▣ FEATURES
-──────────────────────────────
-✦ Dynamic grid of Miraculous and their wielders  
-✦ Transformation showcase with motion-based reveals  
-✦ Detailed character profiles featuring lore-inspired visuals  
-✦ Smooth page transitions and hover interactions  
-✦ Responsive and high-performance design optimized with Vite
+## ❖ Features
+- ✦ Interactive display of all Miraculous and their holders  
+- ✦ Transformation sequences with motion and visual depth  
+- ✦ Character profiles enhanced with lore-inspired design  
+- ✦ Smooth transitions and subtle animations via Framer Motion  
+- ✦ Responsive and optimized experience powered by Vite  
 
+---
 
-──────────────────────────────
-▣ TECH STACK
-──────────────────────────────
-⟢ Framework → React 18 + TypeScript  
-⟢ Bundler → Vite (lightning-fast HMR)  
-⟢ Styling → Tailwind CSS / Custom SCSS modules  
-⟢ Motion → Framer Motion (transitions & transformations)  
-⟢ State Management → React Context / Zustand (optional)  
-⟢ Fonts → Serif + Minimal Sans pairing for cinematic tone
+## ❖ Tech Stack
 
+| Layer | Tools & Frameworks |
+|:------|:--------------------|
+| **Frontend** | React 18 · TypeScript · Vite |
+| **Styling** | Tailwind CSS · Custom SCSS modules |
+| **Animation** | Framer Motion |
+| **State** | React Context / Zustand *(optional)* |
+| **Design** | Serif–Sans pairing for cinematic feel |
 
-──────────────────────────────
-▣ PROJECT STRUCTURE
-──────────────────────────────
+---
+
+## ❖ Project Structure
+```
 miraculous-project/
 ├── src/
 │   ├── assets/        → images, videos, icons
-│   ├── components/    → UI components (cards, modals, transitions)
-│   ├── pages/         → Main views (Home, Showcase, Profile)
+│   ├── components/    → UI elements (cards, modals, transitions)
+│   ├── pages/         → main routes (Home, Showcase, Profile)
 │   ├── data/          → JSON / TS data for Miraculous & holders
-│   ├── styles/        → Tailwind configs / custom themes
-│   └── main.tsx       → App entry point
+│   ├── styles/        → Tailwind configs & global themes
+│   └── main.tsx       → App entry
 ├── public/            → static assets
 ├── index.html
 ├── tsconfig.json
 ├── vite.config.ts
 └── README.md
+```
 
+---
 
-──────────────────────────────
-▣ INSTALLATION & SETUP
-──────────────────────────────
+## ❖ Setup & Installation
+```
 # Clone the repository
 git clone https://github.com/yourusername/miraculous-project.git
 
-# Move into the project
+# Move into the project directory
 cd miraculous-project
 
 # Install dependencies
 npm install
 
-# Start the dev server
+# Start the development server
 npm run dev
+```
+Then open → **http://localhost:5173/**  
 
-Open in browser → http://localhost:5173/
+---
 
+## ❖ Design Philosophy
+> “Each Miraculous tells a story, and every transformation unveils a destiny.”
 
-──────────────────────────────
-▣ DESIGN ETHOS
-──────────────────────────────
-“Each Miraculous tells a story,  
-and every transformation unveils a destiny.”
+The project was crafted to express the cinematic and emotional essence of the *Miraculous* world — combining front-end craftsmanship with narrative depth.  
+Every animation, transition, and detail is designed to feel purposeful, elegant, and lore-true.  
 
-This project was built to express the cinematic and emotional layers of the *Miraculous* universe —  
-blending **animation precision**, **UI minimalism**, and **character storytelling**  
-into a cohesive front-end experience.
+---
 
+## ❖ Future Enhancements
+- ⟡ Integrate transformation sound effects  
+- ⟡ Add Kwami companion profiles  
+- ⟡ Implement light/dark mode toggle  
+- ⟡ Expand timeline of Miraculous swaps  
+- ⟡ Experiment with 3D visualizations (React Three Fiber)  
 
-──────────────────────────────
-▣ FUTURE ENHANCEMENTS
-──────────────────────────────
-⟡ Integrate audio and transformation effects  
-⟡ Add Kwami interaction component  
-⟡ Introduce dark/light mode toggle  
-⟡ Expand with timeline & multi-hero showcase  
-⟡ Possible migration to 3D (Three.js / React Three Fiber)
+---
 
+## ❖ Credits
+**Concept, Design & Development:** [Your Name]  
+**Inspired by:** *Miraculous: Tales of Ladybug & Cat Noir* (Zagtoon & Method Animation)  
+**Assets:** Custom-rendered visuals & non-commercial references  
 
-──────────────────────────────
-▣ CREDITS
-──────────────────────────────
-✧ Concept, Design & Development → [Your Name]  
-✧ Inspired by → *Miraculous: Tales of Ladybug & Cat Noir*  
-✧ Assets → Custom-designed & referenced from series visuals (non-commercial)
+---
 
+> ⟡ *“The magic lies not in the Miraculous, but in the hearts of those who wield them.”*  
 
-──────────────────────────────
-⟡ “The magic lies not in the Miraculous,  
-   but in the hearts of those who wield them.” ⟡
-──────────────────────────────
+---
