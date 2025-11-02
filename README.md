@@ -34,7 +34,7 @@ This web experience fuses **visual storytelling**, **animation precision**, and 
 
 ## ❖ Project Structure
 ```
-miraculous-project/
+Miraculous/
 ├── src/
 │   ├── assets/        → images, videos, icons
 │   ├── components/    → UI elements (cards, modals, transitions)
@@ -54,10 +54,10 @@ miraculous-project/
 ## ❖ Setup & Installation
 ```
 # Clone the repository
-git clone https://github.com/yourusername/miraculous-project.git
+git clone https://github.com/sheemasyed02/Miraculous.git
 
 # Move into the project directory
-cd miraculous-project
+cd Miraculous
 
 # Install dependencies
 npm install
@@ -87,8 +87,8 @@ Every animation, transition, and detail is designed to feel purposeful, elegant,
 ---
 
 ## ❖ Credits
-**Concept, Design & Development:** [Your Name]  
-**Inspired by:** *Miraculous: Tales of Ladybug & Cat Noir* (Zagtoon & Method Animation)  
+**Concept, Design & Development:** *Sheema Syed*  
+**Inspired by:** *Miraculous: Tales of Ladybug & Cat Noir* 
 **Assets:** Custom-rendered visuals & non-commercial references  
 
 ---
