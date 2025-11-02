@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+╔══════════════════════════════════════════════════╗
+           M  I  R  A  C  U  L  O  U  S  
+       Tales of Ladybug & Cat Noir Showcase
+╚══════════════════════════════════════════════════╝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+⟡  An immersive web experience exploring the Miraculous,  
+   their chosen holders, and their transformative powers.  ⟡
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+──────────────────────────────
+▣  OVERVIEW
+──────────────────────────────
+This project is a **React + TypeScript + Vite** web experience that visualizes  
+the *Miraculous universe* — displaying the mystical jewels, their holders,  
+and cinematic transformation sequences through an interactive, aesthetic interface.  
 
-## Expanding the ESLint configuration
+It blends the magic of storytelling with modern web technology,  
+crafted to evoke elegance, secrecy, and heroism — much like the series itself.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+──────────────────────────────
+▣  FEATURES
+──────────────────────────────
+✦ Dynamic grid of Miraculous and their wielders  
+✦ Transformation showcase with motion-based reveals  
+✦ Detailed character profiles featuring lore-inspired visuals  
+✦ Smooth page transitions and hover interactions  
+✦ Responsive and high-performance design optimized with Vite  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+──────────────────────────────
+▣  TECH STACK
+──────────────────────────────
+⟢ **Framework** → React 18 + TypeScript  
+⟢ **Bundler** → Vite (lightning-fast HMR)  
+⟢ **Styling** → Tailwind CSS / Custom SCSS modules  
+⟢ **Motion** → Framer Motion (transitions & transformations)  
+⟢ **State Management** → React Context / Zustand (optional)  
+⟢ **Fonts & Design** → Serif + Minimal Sans pairing for cinematic tone  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+──────────────────────────────
+▣  PROJECT STRUCTURE
+──────────────────────────────
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+miraculous-project/
+├── src/
+│   ├── assets/        → images, videos, icons
+│   ├── components/    → UI components (cards, modals, transitions)
+│   ├── pages/         → Main views (Home, Showcase, Profile)
+│   ├── data/          → JSON / TS data for Miraculous & holders
+│   ├── styles/        → Tailwind configs / custom themes
+│   └── main.tsx       → App entry point
+├── public/            → static assets
+├── index.html
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+──────────────────────────────
+▣  INSTALLATION & SETUP
+──────────────────────────────
+Clone and run locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/sheemasyed02/Miraculous.git
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+````
+
+Open in browser → `http://localhost:5173/`
+
+──────────────────────────────
+▣  DESIGN ETHOS
+──────────────────────────────
+“Each Miraculous tells a story,
+and every transformation unveils a destiny.”
+
+This project was built to express the cinematic and emotional layers of the *Miraculous* universe
+— blending **animation precision**, **UI minimalism**, and **character storytelling** into
+a cohesive front-end experience.
+
+──────────────────────────────
+▣  FUTURE ENHANCEMENTS
+──────────────────────────────
+⟡ Integrate audio and transformation effects
+⟡ Add Kwami interaction component
+⟡ Introduce dark/light mode toggle
+⟡ Expand with timeline & multi-hero showcase
+⟡ Possible migration to 3D (Three.js or React Three Fiber)
+
+──────────────────────────────
+▣  CREDITS
+──────────────────────────────
+✧ Concept, Design & Development → Sheema Syed
+✧ Inspired by → *Miraculous: Tales of Ladybug & Cat Noir*
+✧ Assets → Custom-designed & referenced from series visuals (non-commercial)
+
+──────────────────────────────
+⟡  “The magic lies not in the Miraculous,
+but in the hearts of those who wield them.”  ⟡
+──────────────────────────────
+
 ```
